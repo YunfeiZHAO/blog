@@ -660,7 +660,7 @@ utterances:
 # Based on third-party service
 # See: https://disqus.com
 disqus:
-  shortname:
+  shortname: comment
   # 以下为 Disqusjs 支持, 国内用户如果想使用 Disqus 建议配合使用
   # The following are Disqusjs configurations, please ignore if DisqusJS is not required
   # See: https://github.com/SukkaW/DisqusJS
@@ -671,23 +671,23 @@ disqus:
 # 基于 GitHub Issues
 # Based on GitHub Issues
 # See: https://github.com/gitalk/gitalk#options
-gitalk:
-  clientID: 5c720a9226a9693568e8
-  clientSecret: 3b1141b705f3f40d35e13c7369ef8ca482545c5c
-  repo: blog
-  owner: YunfeiZHAO
-  admin: ['YunfeiZHAO']
-  language: en
-  labels: ['Gitalk']
-  perPage: 10
-  pagerDirection: last
-  distractionFreeMode: false
-  createIssueManually: true
-  # 默认 proxy 已失效，解决方法请见下方链接
-  # The default proxy is invalid, please see the links for the solution
-  # https://github.com/gitalk/gitalk/issues/429
-  # https://github.com/Zibri/cloudflare-cors-anywhere
-  proxy: <your own proxy>/https://github.com/login/oauth/access_token
+# gitalk:
+#   clientID: 5c720a9226a9693568e8
+#   clientSecret: 3b1141b705f3f40d35e13c7369ef8ca482545c5c
+#   repo: blog
+#   owner: YunfeiZHAO
+#   admin: ['YunfeiZHAO']
+#   language: en
+#   labels: ['Gitalk']
+#   perPage: 10
+#   pagerDirection: last
+#   distractionFreeMode: false
+#   createIssueManually: true
+#   # 默认 proxy 已失效，解决方法请见下方链接
+#   # The default proxy is invalid, please see the links for the solution
+#   # https://github.com/gitalk/gitalk/issues/429
+#   # https://github.com/Zibri/cloudflare-cors-anywhere
+#   proxy: <your own proxy>/https://github.com/login/oauth/access_token
 
 # Valine
 # 基于 LeanCloud
