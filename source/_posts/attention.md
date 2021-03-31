@@ -1,12 +1,12 @@
 ---
 title: Attention!
 excerpt: Transfer and Attention Mechanisms
-date: 2021-03-31 16:46:31
 index_img: /attention/elephant.png
 banner_img: /attention/cows.png
+date: 2021-03-31 16:46:31
 tags: [Paper reading]
 
-comment: gitalk
+comment: disqus
 ---
 
 cd
