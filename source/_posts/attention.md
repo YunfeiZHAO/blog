@@ -1,8 +1,8 @@
 ---
 title: Transfer? Attention!
 excerpt: Transfer and Attention Mechanisms
-index_img: /attention/elephant.png
-banner_img: /attention/cows.png
+index_img: /attention/transformer.jpeg
+banner_img: /attention/banner.png
 date: 2021-03-31 16:46:31
 tags: [Paper reading]
 math: true
