@@ -93,6 +93,14 @@ page.banner_mask_alpha = theme.post.banner_mask_alpha
                 <%- partial(type) %>
               </article>
             <% } %>
+
+            <!-- 添加打赏功能 -->
+            <% if (page.donate){ %>
+              <% if (!index && theme.donate){ %>
+              <%- partial('donate') %>
+              <% } %>
+              <% }%>
+              
           </article>
         </div>
       </div>
@@ -113,3 +121,5 @@ page.banner_mask_alpha = theme.post.banner_mask_alpha
     </div>
   </div>
 <% } %>
+
+
