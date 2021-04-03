@@ -9,4 +9,4 @@ comment: disqus
 ---
 
 
-<iframe src="https://gitcdn.link/cdn/TinyJay/donate-page/faa9d69210d334af644f254296e1a8b3e24da3be/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+<iframe src="https://gitcdn.xyz/repo/YunfeiZHAO/blog/main/donation_unit/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
