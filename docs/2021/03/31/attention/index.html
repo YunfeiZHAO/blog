@@ -14,11 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="Transfer and Attention Mechanisms">
+  <meta name="description" content="Transformer and Attention Mechanisms">
   <meta name="author" content="Yunfei">
   <meta name="keywords" content="">
   
-  <title>Transfer? Attention! - Yunfei&#39;s Blog</title>
+  <title>Transformer? Attention! - Yunfei&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Transfer? Attention!">
+            <span class="h2" id="subtitle" title="Transformer? Attention!">
               
             </span>
 
@@ -225,7 +225,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Transfer? Attention!</h1>
+            <h1 style="display: none">Transformer? Attention!</h1>
             
             <div class="markdown-body">
               <h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>Self-attention, it is a mechanism first used for nature language processing, such as language translation and text content summary,etc. Self-attention sometimes called intra-attention is an attention mechanism relating different positions of a single sequence in order to compute a representation of the sequence, the sequence can be a phrase in NPL task.  At the time of the publication of <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Ashish Vaswani, et al. “Attention is all you need” NIPS 2017.
@@ -319,7 +319,7 @@ But we have to build a lot more filter to have large receptive field.
 For training process, given the vectors of probabilities for the whole predicted sequence, we can then do the back propagation for the whole model including the encoder and the decoder.
 
 <h1 id="Attention"><a href="#Attention" class="headerlink" title="Attention"></a>Attention</h1><p>In the context of neural networks, <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Attention_(machine_learning)">attention</a> is a technique that mimics cognitive attention. The effect enhances the important parts of the input data and fades out the rest – the thought being that the network should devote more computing power on that small but important part of the data. Which part of the data is more important than others depends on the context and is learned through training data by gradient descent.</p>
-<p>The Transfer has it’s own attention mechanism called “Scaled Dot-Product Attention”. I’m going to introduce this model in the following</p>
+<p>The Transformer has it’s own attention mechanism called “Scaled Dot-Product Attention”. I’m going to introduce this model in the following</p>
 <h2 id="Query-Key-Value"><a href="#Query-Key-Value" class="headerlink" title="Query, Key, Value"></a>Query, Key, Value</h2><p>The basic elements of this model is <strong>k: query</strong>, <strong>k: key</strong> of dimension $d_k$ and <strong>v: value</strong> of dimension $d_v$.<br>The matrix of attention is showed below:<br><sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Ashish Vaswani, et al. “Attention is all you need” NIPS 2017.
 ">[1]</span></a></sup><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1706.03762">“Attention is all you need”</a><br>$$<br>Attention(Q, K, V) = softmax(\frac{QK^T}{\sqrt{d_k}})V<br>$$<br>where, the compute attention function on a set of queries simultaneously, packed together into a matrix Q. The keys and values are also packed together into matrices K and V. Let’s just keep this equation in mind for now.</p>
 <p>The high level view of self-attention Layer is like this:<br><sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hung-yi Lee. “Transformer”
@@ -342,7 +342,7 @@ For training process, given the vectors of probabilities for the whole predicted
 <img src="/attention/multi_head.png" srcset="/img/loading.gif" lazyload alt="The schema of multi-head Scaled Dot-Product Attention" style="width:800px">
 </p>
 
-<h1 id="Other-main-parts"><a href="#Other-main-parts" class="headerlink" title="Other main parts"></a>Other main parts</h1><p>From the Transfer <a href="/attention/model_architecture.png">model architecture schema</a>, we can notice that there are also several other components and I am going to do an introduction to these parts this section.</p>
+<h1 id="Other-main-parts"><a href="#Other-main-parts" class="headerlink" title="Other main parts"></a>Other main parts</h1><p>From the Transformer <a href="/attention/model_architecture.png">model architecture schema</a>, we can notice that there are also several other components and I am going to do an introduction to these parts this section.</p>
 <h2 id="Position-wise-Feed-Forward-Networks"><a href="#Position-wise-Feed-Forward-Networks" class="headerlink" title="Position-wise Feed-Forward Networks"></a>Position-wise Feed-Forward Networks</h2><p>Position-wise Feed-Forward Networks is named <strong>Feed Forward</strong> in the model architecture schema and it is included in each layer of encoder and decoder. It is consists of two linear transformations with a RELU activation in between.<br>$$<br>FFN(x) = RELU(xW_1 + b_1)W_2 + b_2<br>$$<br>This function is applied to each position separately and identically, another way of describing this is as two convolutions with kernal size 1. While the linear transfermations are the same across different positions,they use different parameters from layer to layer(different $W$ and $b$).</p>
 <h2 id="Embeddings"><a href="#Embeddings" class="headerlink" title="Embeddings"></a>Embeddings</h2><p>Embeddings are learned to convert the input tokens and output tokens to vectors of dimension $d_{model}$. Two embedding layer in encoder, decoder and the pre-softmax linear transformation at the output of the final decoder stack share the same weight matrix. They also multiply those weights by $\sqrt{d_{model}}$</p>
 <h2 id="Positional-Encoding"><a href="#Positional-Encoding" class="headerlink" title="Positional Encoding"></a>Positional Encoding</h2><p>We can notice that there is <strong>no positional information</strong> in self-attention as it is composed of dot product operations in parallel for each element of different position in the sequence. Some information about the relative or absolute position of the tokens in sequence need to be injected. The authors of The Transformer<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hung-yi Lee. “Transformer”
@@ -374,7 +374,7 @@ By summing these two terms, we integrate the one-hot vector which contains the c
 </p>
 
 <h1 id="Citation"><a href="#Citation" class="headerlink" title="Citation"></a>Citation</h1><div class="code-wrapper"><pre><code class="hljs awk">@article&#123;zhao_Attention2021, 
-    title=&#123;Transfer? Attention!&#125;, 
+    title=&#123;Transformer? Attention!&#125;, 
     url=&#123;https:<span class="hljs-regexp">//</span>blog.yunfeizhao.com<span class="hljs-regexp">/2021/</span><span class="hljs-number">03</span><span class="hljs-regexp">/31/</span>attention/&#125;, 
     journal=&#123;https:<span class="hljs-regexp">//</span>blog.yunfeizhao.com/&#125;, 
     author=&#123;ZHAO, Yunfei&#125;, year=&#123;<span class="hljs-number">2021</span>&#125;, month=&#123;Mar&#125;&#125;</code></pre></div>

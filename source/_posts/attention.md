@@ -1,6 +1,6 @@
 ---
-title: Transfer? Attention!
-excerpt: Transfer and Attention Mechanisms
+title: Transformer? Attention!
+excerpt: Transformer and Attention Mechanisms
 index_img: /attention/transformer.jpeg
 banner_img: /attention/banner.png
 date: 2021-03-31 16:46:31
@@ -104,7 +104,7 @@ For training process, given the vectors of probabilities for the whole predicted
 # Attention
 In the context of neural networks, [attention](https://en.wikipedia.org/wiki/Attention_(machine_learning)) is a technique that mimics cognitive attention. The effect enhances the important parts of the input data and fades out the rest -- the thought being that the network should devote more computing power on that small but important part of the data. Which part of the data is more important than others depends on the context and is learned through training data by gradient descent.
 
-The Transfer has it's own attention mechanism called "Scaled Dot-Product Attention". I'm going to introduce this model in the following
+The Transformer has it's own attention mechanism called "Scaled Dot-Product Attention". I'm going to introduce this model in the following
 
 ## Query, Key, Value
 The basic elements of this model is **k: query**, **k: key** of dimension $d_k$ and **v: value** of dimension $d_v$.
@@ -146,7 +146,7 @@ Multi-head attention allows the model to jointly attend to information from diff
 </p>
 
 # Other main parts
-From the Transfer [model architecture schema](/attention/model_architecture.png), we can notice that there are also several other components and I am going to do an introduction to these parts this section.
+From the Transformer [model architecture schema](/attention/model_architecture.png), we can notice that there are also several other components and I am going to do an introduction to these parts this section.
 
 ## Position-wise Feed-Forward Networks
 Position-wise Feed-Forward Networks is named **Feed Forward** in the model architecture schema and it is included in each layer of encoder and decoder. It is consists of two linear transformations with a RELU activation in between.
@@ -190,7 +190,7 @@ The reasons why Transformer becomes the stat-of-art in 2017 and has appealed att
 # Citation
 ```
 @article{zhao_Attention2021, 
-    title={Transfer? Attention!}, 
+    title={Transformer? Attention!}, 
     url={https://blog.yunfeizhao.com/2021/03/31/attention/}, 
     journal={https://blog.yunfeizhao.com/}, 
     author={ZHAO, Yunfei}, year={2021}, month={Mar}}
