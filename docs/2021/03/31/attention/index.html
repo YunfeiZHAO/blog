@@ -158,7 +158,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/attention/banner.png') no-repeat center center;
+         style="background: url('/img/attention/banner.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -228,16 +228,16 @@
             <h1 style="display: none">Transformer? Attention!</h1>
             
             <div class="markdown-body">
-              <h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>Self-attention, it is a mechanism first used for nature language processing, such as language translation and text content summary,etc. Self-attention sometimes called intra-attention is an attention mechanism relating different positions of a single sequence in order to compute a representation of the sequence, the sequence can be a phrase in NPL task.  At the time of the publication of <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Ashish Vaswani, et al. “Attention is all you need” NIPS 2017.
+              <h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>Self-attention, it is a mechanism first used for nature language processing, such as language translation and text content summary,etc. Self-attention sometimes called intra-attention is an attention mechanism relating different positions of a single sequence in order to compute a representation of the sequence, the sequence can be a phrase in NPL task.  At the time Google Brain released <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Ashish Vaswani, et al. “Attention is all you need” NIPS 2017.
 ">[1]</span></a></sup><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1706.03762">“Attention is all you need.”</a>, this mechanism have already become an integral part of compelling sequence modeling and transduction models in various tasks. However such attention mechanism are used in conjunction with a recurrent network(RNN) or a convolutonal network(CNN). Given a sequence of words, if we see the word “eating”, then we will take more attention to the following name of food.</p>
 <p align="center">
-<img src="/attention/sentence-example-attention.png" srcset="/img/loading.gif" lazyload alt="Attention between words" style="width:400px;height:100px;">
+<img src="/img/attention/sentence-example-attention.png" srcset="/img/loading.gif" lazyload alt="Attention between words" style="width:400px;height:100px;">
 </p>
 
 <h2 id="Seq2seq"><a href="#Seq2seq" class="headerlink" title="Seq2seq"></a>Seq2seq</h2><p>One of the example of the application of this mechanism is the famous <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Ilya Sutskever, et al. “Sequence to Sequence Learning with Neural Networks”NIPS 2014.
 ">[2]</span></a></sup><a target="_blank" rel="noopener" href="https://papers.nips.cc/paper/2014/file/a14ac55a4f27472c5d894ec1c3c743d2-Paper.pdf">“Sequence to Sequence Learning with Neural Networks”</a> model. Broadly speaking, it aims to transform an input sequence (source) to a new one (target) and both sequences can be of arbitrary lengths. Examples of transformation tasks include machine translation between multiple languages in either text or audio, and for tasks like adding video caption is also possible. The main struture Seq2seq model uses is the <strong>Encoder-Decoder</strong> structure.</p>
 <p align="center">
-<img src="/attention/encoder-decoder.png" srcset="/img/loading.gif" lazyload alt="RNN Encoder Decoder structure" style="width:400px">
+<img src="/img/attention/encoder-decoder.png" srcset="/img/loading.gif" lazyload alt="RNN Encoder Decoder structure" style="width:400px">
 </p>
 
 <ul>
@@ -248,7 +248,7 @@
 <h2 id="CNN"><a href="#CNN" class="headerlink" title="CNN"></a>CNN</h2><p>People try to use CNN to solve the parallel issue.<br><sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hung-yi Lee. “Transformer”
 ">[3]</span></a></sup><a target="_blank" rel="noopener" href="http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2019/Lecture/Transformer%20(v5).pdf">“Transformer”</a></p>
 <p align="center">
-<img src="/attention/CNN.png" srcset="/img/loading.gif" lazyload alt="Using CNN to replace RNN and CNN can be parallel, Filters in higher layer can
+<img src="/img/attention/CNN.png" srcset="/img/loading.gif" lazyload alt="Using CNN to replace RNN and CNN can be parallel, Filters in higher layer can
 consider longer sequence." style="width:300px">
 </p>
 But we have to build a lot more filter to have large receptive field.
@@ -259,18 +259,18 @@ But we have to build a lot more filter to have large receptive field.
 <h2 id="Model-Architecture"><a href="#Model-Architecture" class="headerlink" title="Model Architecture"></a>Model Architecture</h2><p>The Transformer also take the encode-decoder structure. A high level structure is showed below:<br><sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="Jay Alammar“The Illustrated Transformer”
 ">[6]</span></a></sup><a target="_blank" rel="noopener" href="http://jalammar.github.io/illustrated-transformer/">“The Illustrated Transformer”</a></p>
 <p align="center">
-<img src="/attention/The_transformer_encoders_decoders.png" srcset="/img/loading.gif" lazyload alt="THe encode-decoder structure of the Transformer." style="width:400px">
+<img src="/img/attention/The_transformer_encoders_decoders.png" srcset="/img/loading.gif" lazyload alt="THe encode-decoder structure of the Transformer." style="width:400px">
 </p>
 
 <p>The encoder maps an input sequence of sybol representations $x = (x_1,..,x_3)$ to a sequence of continous representations $z = (z_1,…,z_n)$. Given $z$, the decoder then generate an output sequence $y = (y_1,…,y_3)$ of symbols <strong>one element at a time</strong>. At each step the model is auto-regressive, <strong>consuming the previously generated symbols</strong> as additional input when generating the next. This will be represented in <strong>masking process</strong> in the decoder. </p>
 <p align="center">
-<img src="/attention/embeddings.png" srcset="/img/loading.gif" lazyload alt="Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes." style="width:400px">
+<img src="/img/attention/embeddings.png" srcset="/img/loading.gif" lazyload alt="Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes." style="width:400px">
 </p>
 
 <p>While a more detailed model architecture is represented in “Attention is all you need”<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Ashish Vaswani, et al. “Attention is all you need” NIPS 2017.
 ">[1]</span></a></sup> as below:</p>
 <p align="center">
-<img src="/attention/model_architecture.png" srcset="/img/loading.gif" lazyload alt="The Transformer - model architecture. The encoder and decoder shown in the left and right halves respectively. They both use stacked self-attention and point-wise, fully connected layers." style="width:400px">
+<img src="/img/attention/model_architecture.png" srcset="/img/loading.gif" lazyload alt="The Transformer - model architecture. The encoder and decoder shown in the left and right halves respectively. They both use stacked self-attention and point-wise, fully connected layers." style="width:400px">
 </p>
 
 <ul>
@@ -302,19 +302,19 @@ But we have to build a lot more filter to have large receptive field.
 <p>At the begining, a defaut parameter element which indicate the begin of the output sequence is generate from the output of the encoder and then for each step, the elements from <strong>the previous generated sequence</strong> will be fed into the decoder and that is why we need a mask to let decoder to see only the output at position less than $i$ which is the indice of step (prediction for position $i$).  After the fisrt self-attention layer, the output of this layer will meet the hidden elements generated from the encoder(I will explain these hidden element later in the attention function) and go through the whole decoder stack. The mask process is done by masking future positions (setting them to -inf) before the softmax step in the self-attention calculation.<br><sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="Jay Alammar“The Illustrated Transformer”
 ">[6]</span></a></sup><a target="_blank" rel="noopener" href="http://jalammar.github.io/illustrated-transformer/">“The Illustrated Transformer”</a></p>
 <p align="center">
-<img src="/attention/transformer_decoding.gif" srcset="/img/loading.gif" lazyload alt="Decoder functionality illustration" style="width:600px">
+<img src="/img/attention/transformer_decoding.gif" srcset="/img/loading.gif" lazyload alt="Decoder functionality illustration" style="width:600px">
 </p>
 
 <p><a target="_blank" rel="noopener" href="https://towardsdatascience.com/illustrated-guide-to-transformers-step-by-step-explanation-f74876522bc0">“Illustrated Guide to Transformers- Step by Step Explanation”</a></p>
 <p align="center">
-<img src="/attention/mask_score.png" srcset="/img/loading.gif" lazyload alt="Adding a look-ahead mask to the scaled scores" style="width:400px">
+<img src="/img/attention/mask_score.png" srcset="/img/loading.gif" lazyload alt="Adding a look-ahead mask to the scaled scores" style="width:400px">
 </p>
 
 <h3 id="Final-linear-layer-and-Softmax-layer"><a href="#Final-linear-layer-and-Softmax-layer" class="headerlink" title="Final linear layer and Softmax layer"></a>Final linear layer and Softmax layer</h3><p>The decoder stack outputs a vector of floats and it is final linear layer and softmax layer to turn them into the sequence of worlds. </p>
 <p>For example, the model knows 10,000 unique English world from its training dataset. The linear layer is then a simple fully connected neural network that takes input as decoder stack’s outputs vector and output a 10,000 dimension vector. The softmax layer turns the values in this vector into probabilities (all positive, all add up to 1.0). The cell with the highest probability is chosen, and the word associated with it is produced as the output for this time step.<br><sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="Jay Alammar“The Illustrated Transformer”
 ">[6]</span></a></sup><a target="_blank" rel="noopener" href="http://jalammar.github.io/illustrated-transformer/">“The Illustrated Transformer”</a></p>
 <p align="center">
-<img src="/attention/transformer_decoder_output_softmax.png" srcset="/img/loading.gif" lazyload alt="This figure starts from the bottom with the vector produced as the output of the decoder stack. It is then turned into an output word." style="width:600px">
+<img src="/img/attention/transformer_decoder_output_softmax.png" srcset="/img/loading.gif" lazyload alt="This figure starts from the bottom with the vector produced as the output of the decoder stack. It is then turned into an output word." style="width:600px">
 </p>
 For training process, given the vectors of probabilities for the whole predicted sequence, we can then do the back propagation for the whole model including the encoder and the decoder.
 
@@ -325,12 +325,12 @@ For training process, given the vectors of probabilities for the whole predicted
 <p>The high level view of self-attention Layer is like this:<br><sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hung-yi Lee. “Transformer”
 ">[3]</span></a></sup><a target="_blank" rel="noopener" href="http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2019/Lecture/Transformer%20(v5).pdf">“Transformer”</a></p>
 <p align="center">
-<img src="/attention/self_attention_view.png" srcset="/img/loading.gif" lazyload alt="The high level view of self-attention model. We have a sequence of input x and a sequence of output b" style="width:300px">
+<img src="/img/attention/self_attention_view.png" srcset="/img/loading.gif" lazyload alt="The high level view of self-attention model. We have a sequence of input x and a sequence of output b" style="width:300px">
 </p>
 
 <p>Let’s have a  deeper view of “Scaled Dot-Product Attention”.</p>
 <p align="center">
-<img src="/attention/attention_schema.png" srcset="/img/loading.gif" lazyload alt="The schema to compute Scaled Dot-Product Attention and it's Matrix version presentation" style="width:800px">
+<img src="/img/attention/attention_schema.png" srcset="/img/loading.gif" lazyload alt="The schema to compute Scaled Dot-Product Attention and it's Matrix version presentation" style="width:800px">
 </p> 
 
 <p>This is the schema to compute the scaled Dot-Product attention given an input sequence. People also often use additive attention that compute the compatibility function using a feed-forward network with a single hidden layer. While dot-product attention is much faster and more space-efficient in pratice. But the dot products grow large in magnitude. Assume that the components of $q$ and $k$ are independant random variable with mean 0 and vriance 1. Then their dot product, $q \cdot k = \sum^{d_k}_{i=1}$, has mean 0 and variance $d_k$. So we have the term $\sqrt{d_k}$ to scale the dot product.</p>
@@ -339,10 +339,10 @@ For training process, given the vectors of probabilities for the whole predicted
 <p><sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hung-yi Lee. “Transformer”
 ">[3]</span></a></sup><a target="_blank" rel="noopener" href="http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2019/Lecture/Transformer%20(v5).pdf">“Transformer”</a></p>
 <p align="center">
-<img src="/attention/multi_head.png" srcset="/img/loading.gif" lazyload alt="The schema of multi-head Scaled Dot-Product Attention" style="width:800px">
+<img src="/img/attention/multi_head.png" srcset="/img/loading.gif" lazyload alt="The schema of multi-head Scaled Dot-Product Attention" style="width:800px">
 </p>
 
-<h1 id="Other-main-parts"><a href="#Other-main-parts" class="headerlink" title="Other main parts"></a>Other main parts</h1><p>From the Transformer <a href="/attention/model_architecture.png">model architecture schema</a>, we can notice that there are also several other components and I am going to do an introduction to these parts this section.</p>
+<h1 id="Other-main-parts"><a href="#Other-main-parts" class="headerlink" title="Other main parts"></a>Other main parts</h1><p>From the Transformer <a href="/img/attention/model_architecture.png">model architecture schema</a>, we can notice that there are also several other components and I am going to do an introduction to these parts this section.</p>
 <h2 id="Position-wise-Feed-Forward-Networks"><a href="#Position-wise-Feed-Forward-Networks" class="headerlink" title="Position-wise Feed-Forward Networks"></a>Position-wise Feed-Forward Networks</h2><p>Position-wise Feed-Forward Networks is named <strong>Feed Forward</strong> in the model architecture schema and it is included in each layer of encoder and decoder. It is consists of two linear transformations with a RELU activation in between.<br>$$<br>FFN(x) = RELU(xW_1 + b_1)W_2 + b_2<br>$$<br>This function is applied to each position separately and identically, another way of describing this is as two convolutions with kernal size 1. While the linear transfermations are the same across different positions,they use different parameters from layer to layer(different $W$ and $b$).</p>
 <h2 id="Embeddings"><a href="#Embeddings" class="headerlink" title="Embeddings"></a>Embeddings</h2><p>Embeddings are learned to convert the input tokens and output tokens to vectors of dimension $d_{model}$. Two embedding layer in encoder, decoder and the pre-softmax linear transformation at the output of the final decoder stack share the same weight matrix. They also multiply those weights by $\sqrt{d_{model}}$</p>
 <h2 id="Positional-Encoding"><a href="#Positional-Encoding" class="headerlink" title="Positional Encoding"></a>Positional Encoding</h2><p>We can notice that there is <strong>no positional information</strong> in self-attention as it is composed of dot product operations in parallel for each element of different position in the sequence. Some information about the relative or absolute position of the tokens in sequence need to be injected. The authors of The Transformer<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hung-yi Lee. “Transformer”
@@ -351,7 +351,7 @@ For training process, given the vectors of probabilities for the whole predicted
 ">[3]</span></a></sup><a target="_blank" rel="noopener" href="http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2019/Lecture/Transformer%20(v5).pdf">“Transformer”</a><br><sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="Jay Alammar“The Illustrated Transformer”
 ">[6]</span></a></sup><a target="_blank" rel="noopener" href="http://jalammar.github.io/illustrated-transformer/">“The Illustrated Transformer”</a></p>
 <p align="center">
-<img src="/attention/positional_embedding.png" srcset="/img/loading.gif" lazyload alt="Positional embedding illustration" style="width:800px">
+<img src="/img/attention/positional_embedding.png" srcset="/img/loading.gif" lazyload alt="Positional embedding illustration" style="width:800px">
 </p>
 By summing these two terms, we integrate the one-hot vector which contains the current position information into the input.
 
@@ -364,13 +364,13 @@ By summing these two terms, we integrate the one-hot vector which contains the c
 <h1 id="Some-interesting-images-from-the-paper"><a href="#Some-interesting-images-from-the-paper" class="headerlink" title="Some interesting images from the paper"></a>Some interesting images from the paper</h1><p><sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Ashish Vaswani, et al. “Attention is all you need” NIPS 2017.
 ">[1]</span></a></sup><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1706.03762">“Attention is all you need”</a></p>
 <p align="center">
-<img src="/attention/im1.png" srcset="/img/loading.gif" lazyload style="width:600px">
+<img src="/img/attention/im1.png" srcset="/img/loading.gif" lazyload style="width:600px">
 </p>
 <p align="center">
-<img src="/attention/im2.png" srcset="/img/loading.gif" lazyload style="width:600px">
+<img src="/img/attention/im2.png" srcset="/img/loading.gif" lazyload style="width:600px">
 </p>
 <p align="center">
-<img src="/attention/im3.png" srcset="/img/loading.gif" lazyload style="width:600px">
+<img src="/img/attention/im3.png" srcset="/img/loading.gif" lazyload style="width:600px">
 </p>
 
 <h1 id="Citation"><a href="#Citation" class="headerlink" title="Citation"></a>Citation</h1><div class="code-wrapper"><pre><code class="hljs awk">@article&#123;zhao_Attention2021, 
@@ -419,6 +419,12 @@ By summing these two terms, we integrate the one-hot vector which contains the c
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2021/04/04/DETR/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">DETR: DEtection TRansformer</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
@@ -464,10 +470,6 @@ By summing these two terms, we integrate the one-hot vector which contains the c
 
               </article>
             
-
-            <!-- 添加打赏功能 -->
-            
-              
           </article>
         </div>
       </div>

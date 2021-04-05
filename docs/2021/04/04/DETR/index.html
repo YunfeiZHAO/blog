@@ -14,11 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="A summary of some useful sorting algorithms">
+  <meta name="description" content="You only look once? I do not even have to look. A popular application of Transformer in computer vision.">
   <meta name="author" content="Yunfei">
   <meta name="keywords" content="">
   
-  <title>Some basic sorting algorithms - Yunfei&#39;s Blog</title>
+  <title>DETR: DEtection TRansformer - Yunfei&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -158,12 +158,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/DETR/cows.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Some basic sorting algorithms">
+            <span class="h2" id="subtitle" title="DETR: DEtection TRansformer">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-08-29 13:32" pubdate>
-        August 29, 2020 pm
+      <time datetime="2021-04-04 23:55" pubdate>
+        April 4, 2021 pm
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      0 字
+      713 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      14
        分钟
     </span>
   
@@ -225,10 +225,60 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Some basic sorting algorithms</h1>
+            <h1 style="display: none">DETR: DEtection TRansformer</h1>
             
             <div class="markdown-body">
-              <iframe src="https://gitcdn.link/repo/YunfeiZHAO/blog/main/donation_unit/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+              <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Before reading this article, you may have a look at my previous article <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Yunfei ZHAO “Transformer? Attention!”.
+">[2]</span></a></sup><a href="https://blog.yunfeizhao.com/2021/03/31/attention/">“Transformer? Attention!”</a> in which I explain “Attention mechanism” and “The Transformer”. Early in 2020, Facebook AI proposed a new way to use the Transformer in object detection task in paper <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Nicolas Carion, Francisco Massa et al. “End-to-End Object Detection with Transformers”ECCV 2020.
+">[1]</span></a></sup><a target="_blank" rel="noopener" href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460205.pdf">“End-to-End Object Detection with Transformers”</a>  in which they present a new method that view object detection as a direct set prediction problem.  For now, it only has its basic version that means that it still has quite a lot of potential and can be optimized. However, it has already significantly outperformed competitive baselines for accuracy and run-time. </p>
+<p>There are four special characteristics for this model:</p>
+<ol>
+<li>DETR predicts all objects at once,  and is trained end-to-end.</li>
+<li>DETR does not have multiple hand-designed components that encode prior knowledge, like sliding window, spatial anchors, non-maximal suppression, large set of proposals, or window centers.</li>
+<li>DETR does not require any customized layers, and thus can be reproduced easily in any framework that conatins standard CNN and transformer classes.</li>
+<li>DETR can be easily generalized to produce panoptic segmentation in a unified manner.</li>
+</ol>
+<p>Training code and pretrained models are available at <a target="_blank" rel="noopener" href="https://github.com/facebookresearch/detr">“End-to-End Object Detection with Transformers”</a>.</p>
+<h1 id="Model-Architecture"><a href="#Model-Architecture" class="headerlink" title="Model Architecture"></a>Model Architecture</h1><p><sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Nicolas Carion, Francisco Massa et al. “End-to-End Object Detection with Transformers”ECCV 2020.
+">[1]</span></a></sup> <a target="_blank" rel="noopener" href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460205.pdf">“End-to-End Object Detection with Transformers”</a></p>
+<p align="center">
+<img src="/img/DETR/detr_architecture.png" srcset="/img/loading.gif" lazyload alt="DETR directly predicts (in parallel) the final set of detections by combining a common CNN with a transformer architecture. During training, bipartite matching uniquely assigns predictions with ground truth boxes. Prediction with no match should yield a “no object” (∅) class prediction.
+" style="width:800px;">
+</p>
+
+<p>The overall DETR architecture is surprisingly simple. It contains three main components.</p>
+<ol>
+<li>A CNN backbone to extract a compact feature representation.</li>
+<li>An encoder-decoder transformer.</li>
+<li>A simple feed forward network(FFN) that makes the final detection prediction.</li>
+</ol>
+<h2 id="Backbone"><a href="#Backbone" class="headerlink" title="Backbone"></a>Backbone</h2><p>Starting from the initial image $x_{img}\in R^{3\times H_0\times W_0}$(with 3 color channels) and All imput image are batched together, applying 0-padding adequately to ensure they all have the same dimensions ($H_0, W_0$) as the largest image of the batch. The conventional CNN backbone generats a lower-resolution activation map $f\in R^{C\times H\times W}$ as a <strong>set of image features</strong>. The dimensions of this feature map are $C = 2048$ and $H,W = \frac{H_0}{frac}, \frac{W_0}{frac}$ where <strong>frac</strong> is 32 for DETR and 16 for DETR DC5.</p>
+<h2 id="Transformer-encoder"><a href="#Transformer-encoder" class="headerlink" title="Transformer encoder"></a>Transformer encoder</h2><p>Each encoder layer has a standard architecture (<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Ashish Vaswani, et al. “Attention is all you need” NIPS 2017.
+">[3]</span></a></sup> <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1706.03762">“Attention is all you need”</a>)and consist of a multi-head self-attention module and a feed forward network (FFN). The encoder follows the following steps:</p>
+<ol>
+<li>Use a $1\times1$ convolutional kernal to reduces the channel dimension of the high-level activation map $f$ of dimension $R^{C\times H\times W} $ to a new feature map $z_0$ of dimension $R^{d\times H\times W}$ where $d$ is smaller than $C$.</li>
+<li>Collapse $z_0$ into one dimension, resulting in a $d\times HW$ feature map which is the input sequence for the encoder.</li>
+<li>The transformer architecture is permutation-invariant, we supplement it with fixed <strong>positional encodings</strong> that are added to the input of <strong>each attention layer</strong>.</li>
+</ol>
+<h2 id="Transformer-decoder"><a href="#Transformer-decoder" class="headerlink" title="Transformer decoder"></a>Transformer decoder</h2><p>The decoder follows the standard architecture of the transformer too, transforming $N$ embeddings of size $d$ using multi-headed self- and encoder-decoder attention mechanism.  To be noted that this model decodes the $N$ objects in parallel at each decoder layer(not autoregressive). Since the decoder is permutation-invariant, the N input embeddings must be different to produce different results. These input embeddings are <strong>learnt positional encodings</strong> that we refer to as <em><strong>Object Queries</strong></em>. These queries are added to the input of each attention layer similarly to the encoder.</p>
+<p>It follows the following steps:</p>
+<ol>
+<li>The $N$ object queries are transformed into an output embedding by the decoder.</li>
+<li>The output embeddings are independent decoded into box coordinates and class labels by a <strong>feed forward network</strong>, resulting N final predictions.</li>
+</ol>
+<p>Using self- and encoder-decoder attention over these embeddings, the model globally reasons about all objects together using <strong>pair-wise relations between them</strong>, while being able to use <strong>the whole image as context</strong>.</p>
+<h2 id="Prediction-feed-forward-networks-FFNs"><a href="#Prediction-feed-forward-networks-FFNs" class="headerlink" title="Prediction feed-forward networks(FFNs)"></a>Prediction feed-forward networks(FFNs)</h2><h1 id="Citation"><a href="#Citation" class="headerlink" title="Citation"></a>Citation</h1><div class="code-wrapper"><pre><code class="hljs awk">@article&#123;zhao_DETR2021, 
+    title=&#123;DETR: DEtection TRansformer&#125;, 
+    url=&#123;https:<span class="hljs-regexp">//</span>blog.yunfeizhao.com<span class="hljs-regexp">/2021/</span><span class="hljs-number">04</span><span class="hljs-regexp">/04/</span>DETR/&#125;, 
+    journal=&#123;https:<span class="hljs-regexp">//</span>blog.yunfeizhao.com/&#125;, 
+    author=&#123;ZHAO, Yunfei&#125;, year=&#123;<span class="hljs-number">2021</span>&#125;, month=&#123;Mar&#125;&#125;</code></pre></div>
+
+<iframe src="https://gitcdn.link/repo/YunfeiZHAO/blog/main/donation_unit/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>Nicolas Carion, Francisco Massa et al. <a target="_blank" rel="noopener" href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460205.pdf">“End-to-End Object Detection with Transformers”</a>ECCV 2020.
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>Yunfei ZHAO <a href="https://blog.yunfeizhao.com/2021/03/31/attention/">“Transformer? Attention!”</a>.
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span>Ashish Vaswani, et al. <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1706.03762">“Attention is all you need”</a> NIPS 2017.
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>
@@ -238,7 +288,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Competitive-programming/">Competitive programming</a>
+                      <a class="hover-with-bg" href="/tags/Paper-reading/">Paper reading</a>
                     
                   </div>
                 
@@ -255,15 +305,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/03/31/attention/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Transformer? Attention!</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2021/03/31/attention/">
+                        <span class="hidden-mobile">Transformer? Attention!</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -450,9 +500,55 @@
 
 
 
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
 
 
 
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
 
 
 

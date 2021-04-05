@@ -101,3 +101,10 @@ theme: fluid
 #   type: git
 #   repo: git@github.com:YunfeiZHAO/blog.git
 #   branch: master
+
+sitemap:
+  path: sitemap.xml
+  template: ./sitemap_template.xml
+  rel: false
+  tags: true
+  categories: true
