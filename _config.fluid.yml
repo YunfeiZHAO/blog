@@ -837,7 +837,7 @@ about:
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/YunfeiZHAO", tip: "GitHub" }
     - { class: 'iconfont icon-google-fill',  tip: 'moizhaoyunfei@gmail.com' } 
-    - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
+    - { class: "iconfont icon-wechat-fill", qrcode: "/img/logo.png"}
 
 
 #---------------------------
