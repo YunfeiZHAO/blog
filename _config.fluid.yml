@@ -777,7 +777,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/lake.jpeg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:

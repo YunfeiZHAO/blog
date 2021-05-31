@@ -15,8 +15,8 @@ Before reading this article, you may have a look at my previous article [^2]["Tr
 
 There are four special characteristics for this model:
 
-1. DETR predicts all objects at once,  and is trained end-to-end.
-2. DETR does not have multiple hand-designed components that encode prior knowledge, like sliding window, spatial anchors, non-maximal suppression, large set of proposals, or window centers.
+1. DETR predicts all objects at once and is trained end-to-end.
+2. DETR does not have multiple hand-designed components that encode prior knowledge, like sliding windows, spatial anchors, non-maximal suppression, large set of proposals, or window centers.
 3. DETR does not require any customized layers, and thus can be reproduced easily in any framework that conatins standard CNN and transformer classes.
 4. DETR can be easily generalized to produce panoptic segmentation in a unified manner.
 
@@ -96,7 +96,7 @@ As we mentioned at the beginning, this model views object detection as a direct 
 
 The key element for training prossess is the **loss function**. DETR infers a fixed-size set of N predictions, in a single pass through the decoder, where N is set to be significantly larger thatn the typical number of object in an image and we need to score predicted objects (**class, position, size**) with respect to the ground truth. So the loss function following two steps:
 
-1. Produce an optimal bipartite mateching between predicted and ground truth objects.
+1. Produce an optimal bipartite matching between predicted and ground truth objects.
 2. Optimize object-specific (bounding box) losses.
 
 ## Search for the permutation
@@ -165,7 +165,7 @@ To DETR panoptic segmentation has 4 parts:
 
 
 # Conclusion
-DETR is a new design for object detection systems based on transformer and bipartite matching loss fro direct set prediction. It is one of the most popular model in 2020. Without bells and whistles, it achieves comparable results to a well optimized Faster R-CNN baseline on the challenging COCO dataset. 
+DETR is a new design for object detection systems based on Transformer and bipartite matching loss from direct set prediction. It is one of the most popular model in 2020. Without bells and whistles, it achieves comparable results to a well optimized Faster R-CNN baseline on the challenging COCO dataset. 
 This new design for detectors also comes with new challenges, in particular regarding training, optimization and performances on small objects and it has large potential to be optimized.
 
 # Citation
