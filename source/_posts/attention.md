@@ -5,6 +5,7 @@ index_img: /img/attention/transformer.jpeg
 banner_img: /img/attention/banner.png
 date: 2021-03-31 16:46:31
 tags: [Paper reading]
+category: Computer vision
 math: true
 comment: disqus
 ---
@@ -99,7 +100,7 @@ For example, the model knows 10,000 unique English world from its training datas
 <p align="center">
 <img src="/img/attention/transformer_decoder_output_softmax.png" alt="This figure starts from the bottom with the vector produced as the output of the decoder stack. It is then turned into an output word." style="width:600px">
 </p>
-For training process, given the vectors of probabilities for the whole predicted sequence, we can then do the back propagation for the whole model including the encoder and the decoder.
+For the training process, given the vectors of probabilities for the whole predicted sequence, we can then do the backpropagation for the whole model including the encoder and the decoder.
 
 # Attention
 In the context of neural networks, [attention](https://en.wikipedia.org/wiki/Attention_(machine_learning)) is a technique that mimics cognitive attention. The effect enhances the important parts of the input data and fades out the rest -- the thought being that the network should devote more computing power on that small but important part of the data. Which part of the data is more important than others depends on the context and is learned through training data by gradient descent.

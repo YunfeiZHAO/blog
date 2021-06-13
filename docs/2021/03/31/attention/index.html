@@ -316,7 +316,7 @@ But we have to build a lot more filter to have large receptive field.
 <p align="center">
 <img src="/img/attention/transformer_decoder_output_softmax.png" srcset="/img/loading.gif" lazyload alt="This figure starts from the bottom with the vector produced as the output of the decoder stack. It is then turned into an output word." style="width:600px">
 </p>
-For training process, given the vectors of probabilities for the whole predicted sequence, we can then do the back propagation for the whole model including the encoder and the decoder.
+For the training process, given the vectors of probabilities for the whole predicted sequence, we can then do the backpropagation for the whole model including the encoder and the decoder.
 
 <h1 id="Attention"><a href="#Attention" class="headerlink" title="Attention"></a>Attention</h1><p>In the context of neural networks, <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Attention_(machine_learning)">attention</a> is a technique that mimics cognitive attention. The effect enhances the important parts of the input data and fades out the rest – the thought being that the network should devote more computing power on that small but important part of the data. Which part of the data is more important than others depends on the context and is learned through training data by gradient descent.</p>
 <p>The Transformer has it’s own attention mechanism called “Scaled Dot-Product Attention”. I’m going to introduce this model in the following</p>
@@ -397,6 +397,13 @@ By summing these two terms, we integrate the one-hot vector which contains the c
             <hr>
             <div>
               <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Computer-vision/">Computer vision</a>
+                    
+                  </div>
                 
                 
                   <div class="post-meta">

@@ -5,6 +5,7 @@ index_img: /img/DETR/elephant.png
 banner_img: /img/DETR/cows.png
 date: 2021-04-04 23:55:48
 tags: [Paper reading]
+category: Computer vision
 math: true
 mermaid: true
 comment: disqus

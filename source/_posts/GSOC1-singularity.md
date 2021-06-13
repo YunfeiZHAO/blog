@@ -1,9 +1,11 @@
 ---
-title: GSOC week0 - Singularity
+title: GSOC week1 - Singularity - (May 24, 2021 - May 30, 2021)
 date: 2021-05-30 12:13:53
 category: GSOC 2021 Redhen
 tags: [HPC]
-excerpt: Community bonding period with Redhen during Google Summer of Code 2021. An introduction to the community, my project and Singularity on HPC. (May 17, 2021 - May 30, 2021)
+excerpt: 'Community bonding period with Redhen during Google Summer of Code 2021. An introduction to Singularity and setup Singularity on HPC.
+(May 24, 2021 - May 30, 2021)'
+
 index_img: /img/singularity/singularity.png
 banner_img: /img/GSOC_2021/gsoc2021.png
 comment: disqus
@@ -80,3 +82,25 @@ Besides building a container there are also two interesting registry for Singula
 
 They are like docker hub where you can build, share or download images.
 
+## Useful documents
+You may have a look at the detailed instructions to use [Singularity  Lab: Build A Container](https://github.com/singularityhub/singularityhub.github.io/wiki/Build-A-Container). 
+There is also a very useful document [on Redhen about using Sigularity](https://sites.google.com/case.edu/techne-public-site/singularity).
+There is also an introduction of using singularity on [Case Western Reserve HPC](https://sites.google.com/a/case.edu/hpcc/hpc-cluster/software/Software-Guide/s-t/singularity).
+To install Singularity on your computer, have a look on [the official documents of Singularity container](https://sylabs.io/guides/3.3/user-guide/installation.html).
+
+## Build an Openpose singularity container
+1. Write a singularity definition file we name as openpose.def here. I followed steps introduced by Frankier and Zhiqi who are GSOC2020 students. You can have a look at their [github](https://github.com/frankier/openpose_containers). My definition file can be found on [My github](https://github.com/YunfeiZHAO/gsoc-redhen-2021/tree/main/singularity).
+2. If you want to build Singularity container locally, you need to follow the [introduction here](https://singularity-tutorial.github.io/01-installation/). I chose the Sigularity version 2.5.2 which can aussi be used on my HPC server. If you want to build a container locally, you need to have enough space on your working space, it can easily take more than 1g of memory depends on your project.
+3. To build a container, you need to have a root access and you can use this command to get into it.
+    * **sudo -i**
+    To run the build process, you need the command like this:
+    * **sudo singularity build --sandbox openpose_container openpose.def**
+4. After the building process, you will find a new folder is created named openpose_container. You can shell into the container as follows (-w means “writable):
+    * **sudo singularity shell -w openpose_container**
+5. To create the final portable unchangeable image (after training etc.):
+    * **sudo singularity build openpose_container.simg openpose_container**
+6. Finally, you can either upload the whole folder of openpose_container or openpose_container.simg on your HPC. It is recommended by using **rsync** command than use **scp**. Because you need to upload some very big files only once. If the connection is interrupted, you can continue the work by reusing the same command.
+    * **sudo rsync --progress -a ./openpose_container/ server_domain_name:~/openpose_container/**
+7. If you want to a container to have a shared folder with your host, you can use the following command.
+    * **sudo singularity shell -w --bind ~/Desktop/container:/home  ubuntu_container**
+    In this way, you can bind the folder ~/Desktop/container on your host to /home on your container.
