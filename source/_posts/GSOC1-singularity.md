@@ -113,5 +113,16 @@ To install Singularity on your computer, have a look on [the official documents 
 9. Load some necessary modules on HPC:
     * **module load singularity**
     * **module load cuda**
-    * **srun -p gpu --gpus 1 --mem 4000 --cpus-per-gpu 2 --pty bash # do -h to know more options**
+    * **srun -p gpu \--gpus 1 \--mem 4000 \--cpus-per-gpu 2 \--pty bash # do -h to know more options**
     * **pestat -p gpu -w <hostname> # this will show memory usage, has to be run on another terminal**
+
+10. Use GPU in singularity:
+    * You can firstly have a look at this document from [Sylab.io](https://sylabs.io/guides/3.5/user-guide/gpu.html)
+    * what I do is to use **singularity shell --nv --bind ./home:/home --bind /usr/local/cuda-11.2:/usr/local/cuda ubuntu_container**
+    In this way you mount cuda directory and also a list of files in /usr/bin of the host to your conatainer:
+    nvidia-cua-mps-control dnvidia-cuda-mps-server nvidia-debugdump nvidia-persistenced nvidia-smi
+    * You need to add cuda path in your .bashrc and source it
+    ``` CUDA
+    export PATH=$PATH:/usr/local/cuda/bin
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+    ```
