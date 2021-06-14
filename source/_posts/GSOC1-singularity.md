@@ -104,3 +104,14 @@ To install Singularity on your computer, have a look on [the official documents 
 7. If you want to a container to have a shared folder with your host, you can use the following command.
     * **sudo singularity shell -w --bind ~/Desktop/container:/home  ubuntu_container**
     In this way, you can bind the folder ~/Desktop/container on your host to /home on your container.
+8. To use a user in a container, but you do not in the sudoer group on HPC to change user. You can following these steps:
+    * Create a home folder locally and mount the home folder on a container home directory when run it with sudo.
+    * Add a user with the same user name on HPC and switch to this user. Install everything like Anaconda, etc.
+    * Upload the container(If it is already on the HPC, you do not need to do this) and the home folder on HPC. 
+    * Then, on HPC, you can run the container by binding the home directories like what you do locally, and you will find you are using the user in the container as the same name you have in HPC and the home directory is what you created locally.
+
+9. Load some necessary modules on HPC:
+    * **module load singularity**
+    * **module load cuda**
+    * **srun -p gpu --gpus 1 --mem 4000 --cpus-per-gpu 2 --pty bash # do -h to know more options**
+    * **pestat -p gpu -w <hostname> # this will show memory usage, has to be run on another terminal**
