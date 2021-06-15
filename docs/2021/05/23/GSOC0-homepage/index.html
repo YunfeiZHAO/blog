@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/me.jpg">
+  <link rel="icon" href="/img/me.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="Community bonding period with Redhen during Google Summer of Code 2021. An introduction to the GSOC, Redhen, and my project. (May 17, 2021 - May 23, 2021)">
+  <meta name="author" content="Yunfei">
+  <meta name="keywords" content="">
+  
+  <title>GSOC week0 - Homepage - Yunfei&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.yunfeizhao.com","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Yunfei's blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/GSOC_2021/redhen.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="GSOC week0 - Homepage">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-05-23 12:13" pubdate>
+        May 23, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      634 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">GSOC week0 - Homepage</h1>
+            
+            <div class="markdown-body">
+              <h1 id="GSOC-2021"><a href="#GSOC-2021" class="headerlink" title="GSOC 2021"></a>GSOC 2021</h1><p>I am very happy to be accepted this year as a GSOC student in the Redhen lab. Google Summer of Code is a global program focused on bringing more student developers into open source software development. Students work with an open-source organization on a 10-week programming project during their break from school. <a target="_blank" rel="noopener" href="https://summerofcode.withgoogle.com/organizations/?sp-page=3">The organization list for 2021 is listed here</a> </p>
+<h1 id="Redhen-Lab"><a href="#Redhen-Lab" class="headerlink" title="Redhen Lab"></a>Redhen Lab</h1><p>The International Distributed Little Red Hen Lab™ is a global big data science laboratory and cooperative for research into multimodal communication. The main idea of the Redhen lab is cooperation. It is not like a traditional university where professors lead students to do research, while, in the Redhen Lab everyone makes contributions to make progress of research in the multimodal communication world. <a target="_blank" rel="noopener" href="https://www.redhenlab.org/home">The Redhen Lab home page</a> can be found here if you are interested in this community.</p>
+<h1 id="Project-Description"><a href="#Project-Description" class="headerlink" title="Project Description"></a>Project Description</h1><p>Gesture recognition becomes popular in recent years since it can play an essential role in many fields, such as non-verbal communication, emotion analysis, human-computer interaction, etc.  We can notice that people use quite a lot of hand gestures in daily life. The research task is to detect hand gestures in raw news videos that are streams of RGB images. I propose a keypoints-based pose tracking system for human tracking and a Transformer and keypoints-based gesture detector for gesture detection to fulfill this task. This structure is composed of a keypoints extractor, a person tracker, and a gesture detector. So the mission has three main parts. The first part is to track people in temporal space.  In the second part, for each person, we use their hand keypoints features in temporal space to construct several keypoints sequences. The third part is to use these sequences to make predictions of the existence of gestures. I believe that for gesture detection tasks, both spatial and temporal information is important. So that is why we use the Transformer that can take into account the local shape information of hands in one frame and can also capture the global hand motion information across the frames. As hand gestures in news videos do not have a good definition of label class, we start with only detecting the existence of a hand gesture. The classification can be easily extended. The final evaluation will be done on Redhen’s “Newscape Dataset”.</p>
+<h1 id="Weekly-Report"><a href="#Weekly-Report" class="headerlink" title="Weekly Report"></a>Weekly Report</h1><p>
+    <a style="color:#FF851B ;font-size: 24px;">Community Bonding Period</a> 
+    <a style="float: right;font-weight: bold;">(From May 17, 2021 till June 7, 2021)</a>
+</p>
+
+<ul>
+<li><a href="/2021/05/23/GSOC0-homepage/">Week 0 Homepage</a> <a style="float: right;">(May 17 ~ May 23, 2021)</a></li>
+<li><a href="/2021/05/30/GSOC1-singularity/">Week 1 Report</a> <a style="float: right;">(May 24 ~ May 30, 2021)</a></li>
+<li><a href="">Week 2 Report</a>                               <a style="float: right;">(May 31 ~ Juin 06, 2021)</a></li>
+</ul>
+<p>
+    <a style="color:#FF851B ;font-size: 24px;">Coding Period Before the First Evaluation</a> 
+    <a style="float: right;font-weight: bold;">(First evaluation time July 12 - 16, 2021)</a>
+</p>
+
+<ul>
+<li><a href="">Week 3 Report</a> <a style="float: right;">(Juin 07 ~ Juin 13, 2021)</a></li>
+<li><a href="">Week 4 Report</a> <a style="float: right;">(Juin 14 ~ Juin 20, 2021)</a></li>
+<li><a href="">Week 5 Report</a> <a style="float: right;">(Juin 21 ~ Juin 27, 2021)</a></li>
+<li><a href="">Week 6 Report</a> <a style="float: right;">(Juin 28 ~ July 04, 2021)</a></li>
+<li><a href="">Week 7 Report</a> <a style="float: right;">(July 05 ~ July 11, 2021)</a></li>
+</ul>
+<p>
+    <a style="color:#FF851B ;font-size: 24px;">Coding Period Before the Final Evaluation</a> 
+    <a style="float: right;font-weight: bold;">(Final evaluation time August 16 - 23, 2021)</a>
+</p>
+
+<ul>
+<li><a href="">Week 8 Report</a> <a style="float: right;">(July 12 ~ July 18, 2021)</a></li>
+<li><a href="">Week 9 Report</a> <a style="float: right;">(July 19 ~ July 25, 2021)</a></li>
+<li><a href="">Week 10 Report</a> <a style="float: right;">(July 26 ~ August 01, 2021)</a></li>
+<li><a href="">Week 11 Report</a> <a style="float: right;">(August 02 ~ August 08, 2021)</a></li>
+<li><a href="">Week 11 Report</a> <a style="float: right;">(August 09 ~ August 15, 2021)</a></li>
+</ul>
+<p><a href="">Final result</a> <a style="float: right;">(August 31, 2021)</a></p>
+<h1 id="Related-Papers"><a href="#Related-Papers" class="headerlink" title="Related Papers"></a>Related Papers</h1><h2 id="Computer-Vision"><a href="#Computer-Vision" class="headerlink" title="Computer Vision"></a>Computer Vision</h2><p>[1]: Nicolas Carion, Francisco Massa et al. <a target="_blank" rel="noopener" href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460205.pdf">“End-to-End Object Detection with Transformers”</a>ECCV 2020.<br>[2]: Zhe Cao, Gines Hidalgo, Tomas Simon,  Shih-En Wei, Yaser Sheikh et al. <a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8765346">“OpenPose: Realtime Multi-Person 2D PoseEstimation using Part Affinity Fields”</a> IEEE Transactions on Pattern Analysis and Machine Intelligence.  Date of publication: 17 July 2019.</p>
+<h2 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h2><p>[1]:  Chunhui Gu, Chen Sun, David A. Ross, Carl Vondrick et al. <a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Gu_AVA_A_Video_CVPR_2018_paper.pdf">“AVA: A Video Dataset of Spatio-temporally Localized Atomic Visual Actions”</a> CVPR 2018.</p>
+<h1 id="Links-for-this-project"><a href="#Links-for-this-project" class="headerlink" title="Links for this project"></a>Links for this project</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/YunfeiZHAO/gsoc-redhen-2021">GSOC 2021 Yunfei ZHAO Github</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.redhenlab.org/summer-of-code/red-hen-lab-gsoc-2021-projects">Project page on Redhen</a></li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/GSOC-2021-Redhen/">GSOC 2021 Redhen</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Event/">Event</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    All articles in this blog adopt the <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 Agreement</a> ，Please indicate the source for reprinting！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/05/30/GSOC1-singularity/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">GSOC week1 - Singularity - (May 24, 2021 - May 30, 2021)</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/04/DETR/">
+                        <span class="hidden-mobile">DETR: DEtection TRansformer</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script>
+        Fluid.utils.lazyComments('disqus_thread', function() {
+          Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+          Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'yunfeizhao',
+              apikey: 'qBJvBv8kSHNJqTtxUKowcMkJPSbycMKdj2I3bmKYVEpSQVz1WnDigvHUOvnBx2L9'
+            });
+          });
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
