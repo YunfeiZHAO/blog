@@ -14,11 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="Community bonding period with Redhen during Google Summer of Code 2021. An introduction to the GSOC, Redhen, and my project. (May 17, 2021 - May 23, 2021)">
+  <meta name="description" content="Community bonding period with Redhen during Google Summer of Code 2021. Resume of first three meetings and first Milestone setting and transfer learning of DETR. (May 31 ~ Juin 06, 2021)">
   <meta name="author" content="Yunfei">
   <meta name="keywords" content="">
   
-  <title>GSOC week0 - Homepage - Yunfei&#39;s Blog</title>
+  <title>GSOC week2 - Transfer Learning on DETR - (May 31 ~ Juin 06, 2021) - Yunfei&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="GSOC week0 - Homepage">
+            <span class="h2" id="subtitle" title="GSOC week2 - Transfer Learning on DETR - (May 31 ~ Juin 06, 2021)">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-05-23 12:13" pubdate>
-        May 23, 2021 pm
+      <time datetime="2021-06-06 21:37" pubdate>
+        June 6, 2021 pm
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      647 字
+      328 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      12
+      6
        分钟
     </span>
   
@@ -225,54 +225,18 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">GSOC week0 - Homepage</h1>
+            <h1 style="display: none">GSOC week2 - Transfer Learning on DETR - (May 31 ~ Juin 06, 2021)</h1>
             
             <div class="markdown-body">
-              <h1 id="GSOC-2021"><a href="#GSOC-2021" class="headerlink" title="GSOC 2021"></a>GSOC 2021</h1><p>I am very happy to be accepted this year as a GSOC student in the Redhen lab. Google Summer of Code is a global program focused on bringing more student developers into open source software development. Students work with an open-source organization on a 10-week programming project during their break from school. <a target="_blank" rel="noopener" href="https://summerofcode.withgoogle.com/organizations/?sp-page=3">The organization list for 2021 is listed here</a> </p>
-<h1 id="Redhen-Lab"><a href="#Redhen-Lab" class="headerlink" title="Redhen Lab"></a>Redhen Lab</h1><p>The International Distributed Little Red Hen Lab™ is a global big data science laboratory and cooperative for research into multimodal communication. The main idea of the Redhen lab is cooperation. It is not like a traditional university where professors lead students to do research, while, in the Redhen Lab everyone makes contributions to make progress of research in the multimodal communication world. <a target="_blank" rel="noopener" href="https://www.redhenlab.org/home">The Redhen Lab home page</a> can be found here if you are interested in this community.</p>
-<h1 id="Project-Description"><a href="#Project-Description" class="headerlink" title="Project Description"></a>Project Description</h1><p>Gesture recognition becomes popular in recent years since it can play an essential role in many fields, such as non-verbal communication, emotion analysis, human-computer interaction, etc.  We can notice that people use quite a lot of hand gestures in daily life. The research task is to detect hand gestures in raw news videos that are streams of RGB images. I propose a keypoints-based pose tracking system for human tracking and a Transformer and keypoints-based gesture detector for gesture detection to fulfill this task. This structure is composed of a keypoints extractor, a person tracker, and a gesture detector. So the mission has three main parts. The first part is to track people in temporal space.  In the second part, for each person, we use their hand keypoints features in temporal space to construct several keypoints sequences. The third part is to use these sequences to make predictions of the existence of gestures. I believe that for gesture detection tasks, both spatial and temporal information is important. So that is why we use the Transformer that can take into account the local shape information of hands in one frame and can also capture the global hand motion information across the frames. As hand gestures in news videos do not have a good definition of label class, we start with only detecting the existence of a hand gesture. The classification can be easily extended. The final evaluation will be done on Redhen’s “Newscape Dataset”.</p>
-<h1 id="Weekly-Report"><a href="#Weekly-Report" class="headerlink" title="Weekly Report"></a>Weekly Report</h1><p>
-    <a style="color:#FF851B ;font-size: 24px;">Community Bonding Period</a> 
-    <a style="float: right;font-weight: bold;">(From May 17, 2021 till June 7, 2021)</a>
-</p>
-
+              <h1 id="Blog-Resume"><a href="#Blog-Resume" class="headerlink" title="Blog Resume"></a>Blog Resume</h1><p>Community bonding period with Redhen during Google Summer of Code 2021. (May 31 ~ Juin 06, 2021)</p>
 <ul>
-<li><a href="/2021/05/23/GSOC0-homepage/">Week 0 Homepage</a> <a style="float: right;">(May 17 ~ May 23, 2021)</a></li>
-<li><a href="/2021/05/30/GSOC1-singularity/">Week 1 Report: Setup Singularity on HPC</a> <a style="float: right;">(May 24 ~ May 30, 2021)</a></li>
-<li><a href="/2021/06/06/GSOC2-Transfer-Learning/">Week 2 Report: Transfer Learning for DETR</a> <a style="float: right;">(May 31 ~ Juin 06, 2021)</a></li>
+<li>Resume of first three meetings</li>
+<li>Transfer Learning of DETR.</li>
 </ul>
-<p>
-    <a style="color:#FF851B ;font-size: 24px;">Coding Period Before the First Evaluation</a> 
-    <a style="float: right;font-weight: bold;">(First evaluation time July 12 - 16, 2021)</a>
-</p>
-
-<ul>
-<li><a href="">Week 3 Report</a> <a style="float: right;">(Juin 07 ~ Juin 13, 2021)</a></li>
-<li><a href="">Week 4 Report</a> <a style="float: right;">(Juin 14 ~ Juin 20, 2021)</a></li>
-<li><a href="">Week 5 Report</a> <a style="float: right;">(Juin 21 ~ Juin 27, 2021)</a></li>
-<li><a href="">Week 6 Report</a> <a style="float: right;">(Juin 28 ~ July 04, 2021)</a></li>
-<li><a href="">Week 7 Report</a> <a style="float: right;">(July 05 ~ July 11, 2021)</a></li>
-</ul>
-<p>
-    <a style="color:#FF851B ;font-size: 24px;">Coding Period Before the Final Evaluation</a> 
-    <a style="float: right;font-weight: bold;">(Final evaluation time August 16 - 23, 2021)</a>
-</p>
-
-<ul>
-<li><a href="">Week 8 Report</a> <a style="float: right;">(July 12 ~ July 18, 2021)</a></li>
-<li><a href="">Week 9 Report</a> <a style="float: right;">(July 19 ~ July 25, 2021)</a></li>
-<li><a href="">Week 10 Report</a> <a style="float: right;">(July 26 ~ August 01, 2021)</a></li>
-<li><a href="">Week 11 Report</a> <a style="float: right;">(August 02 ~ August 08, 2021)</a></li>
-<li><a href="">Week 11 Report</a> <a style="float: right;">(August 09 ~ August 15, 2021)</a></li>
-</ul>
-<p><a href="">Final result</a> <a style="float: right;">(August 31, 2021)</a></p>
-<h1 id="Related-Papers"><a href="#Related-Papers" class="headerlink" title="Related Papers"></a>Related Papers</h1><h2 id="Computer-Vision"><a href="#Computer-Vision" class="headerlink" title="Computer Vision"></a>Computer Vision</h2><p>[1]: Nicolas Carion, Francisco Massa et al. <a target="_blank" rel="noopener" href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460205.pdf">“End-to-End Object Detection with Transformers”</a>ECCV 2020.<br>[2]: Zhe Cao, Gines Hidalgo, Tomas Simon,  Shih-En Wei, Yaser Sheikh et al. <a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8765346">“OpenPose: Realtime Multi-Person 2D PoseEstimation using Part Affinity Fields”</a> IEEE Transactions on Pattern Analysis and Machine Intelligence.  Date of publication: 17 July 2019.</p>
-<h2 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h2><p>[1]:  Chunhui Gu, Chen Sun, David A. Ross, Carl Vondrick et al. <a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Gu_AVA_A_Video_CVPR_2018_paper.pdf">“AVA: A Video Dataset of Spatio-temporally Localized Atomic Visual Actions”</a> CVPR 2018.</p>
-<h1 id="Links-for-this-project"><a href="#Links-for-this-project" class="headerlink" title="Links for this project"></a>Links for this project</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/YunfeiZHAO/gsoc-redhen-2021">GSOC 2021 Yunfei ZHAO Github</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.redhenlab.org/summer-of-code/red-hen-lab-gsoc-2021-projects">Project page on Redhen</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.overleaf.com/read/jwnknydxtpdh">Original proposal of this project</a></li>
-</ul>
+<h1 id="Meetings"><a href="#Meetings" class="headerlink" title="Meetings"></a>Meetings</h1><p>On Friday 21st May, I had my first meeting with three of my six mentors. They are <a target="_blank" rel="noopener" href="https://dbis.dmi.unibas.ch/team/mahnaz-parian-scherb/">Mahnaz Parian-Scherb</a> who recently finished her PHD degree at the University of Basel of majored in Multimedia Information Retrieval, and she is the mentor who will follow the whole project this summer. She helped me a lot during the preparatio of my GSOC proposal, <a target="_blank" rel="noopener" href="https://sites.google.com/view/danielalcaraz">Daniel Alcaraz Carrión</a> who is a cognitive linguist specialises in multimodal communication and <a target="_blank" rel="noopener" href="https://sites.google.com/site/inesolza/home">Inés Olza</a> who is a Tenured Researcher in Linguistics. It was a short meeting with self-presentations and a little presentation of my project. They confirmed that my project has a foreseeable value in multimodal communication as we need to retrieve information like hand gestures in huge volume of videos to do further research.</p>
+<p>On Friday 28st May, The whole Redhen Lab held a very lively team meeting. 58 people participated in this meeting, where <a target="_blank" rel="noopener" href="https://www.redhenlab.org/summer-of-code/red-hen-lab-gsoc-2021-projects">12 selected students</a> in this year’s program got to know each other and shared our projects. I am very glad to meet so many professors and students who have the same passion to meet here thanks to Redhen lab.</p>
+<h1 id="Introduction-of-DETR"><a href="#Introduction-of-DETR" class="headerlink" title="Introduction of DETR"></a>Introduction of DETR</h1><p>I wrote two blogs about <a href="/2021/03/31/attention/">attention mechnism</a> and <a href="/2021/04/04/DETR/">DETR</a> respectively. If these two terms are new for you, feel free to have a look at them by clicking the links. In conclusion, models based on Transformer are very good tools to extract both local information that represents the shape of the hand in one video frame and global information that represent the motions across several video frames.</p>
+<h1 id="Transfer-Learning-on-DETR"><a href="#Transfer-Learning-on-DETR" class="headerlink" title="Transfer Learning on DETR"></a>Transfer Learning on DETR</h1><p>During this week’s work, I read thoroughly <a target="_blank" rel="noopener" href="https://github.com/facebookresearch/detr">the official implementation of DETR</a> published by Facebook. This project uses only python with Pytorch as the machine learning framework  that makes it easy to use and easy to understand.</p>
 
             </div>
             <hr>
@@ -290,7 +254,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Event/">Event</a>
+                      <a class="hover-with-bg" href="/tags/Machine-Learning/">Machine Learning</a>
                     
                   </div>
                 
@@ -307,18 +271,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/05/30/GSOC1-singularity/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">GSOC week1 - Singularity - (May 24, 2021 - May 30, 2021)</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/04/DETR/">
-                        <span class="hidden-mobile">DETR: DEtection TRansformer</span>
+                      <a href="/2021/05/30/GSOC1-singularity/">
+                        <span class="hidden-mobile">GSOC week1 - Singularity - (May 24, 2021 - May 30, 2021)</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

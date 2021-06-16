@@ -7,7 +7,7 @@ excerpt: 'Community bonding period with Redhen during Google Summer of Code 2021
 (May 17, 2021 - May 23, 2021)'
 
 index_img: /img/GSOC_2021/gsoc.png
-banner_img: /img/GSOC_2021/redhen.png
+banner_img: /img/GSOC_2021/gsoc2021.png
 comment: disqus
 ---
 # GSOC 2021
@@ -26,8 +26,8 @@ Gesture recognition becomes popular in recent years since it can play an essenti
 </p>
 
 * [Week 0 Homepage](/2021/05/23/GSOC0-homepage/) <a style="float: right;">(May 17 ~ May 23, 2021)</a>
-* [Week 1 Report](/2021/05/30/GSOC1-singularity/) <a style="float: right;">(May 24 ~ May 30, 2021)</a>
-* [Week 2 Report]()                               <a style="float: right;">(May 31 ~ Juin 06, 2021)</a>
+* [Week 1 Report: Setup Singularity on HPC](/2021/05/30/GSOC1-singularity/) <a style="float: right;">(May 24 ~ May 30, 2021)</a>
+* [Week 2 Report: Transfer Learning for DETR](/2021/06/06/GSOC2-Transfer-Learning/) <a style="float: right;">(May 31 ~ Juin 06, 2021)</a>
 
 <p>
     <a style="color:#FF851B ;font-size: 24px;">Coding Period Before the First Evaluation</a> 
@@ -65,3 +65,4 @@ Gesture recognition becomes popular in recent years since it can play an essenti
 # Links for this project
 * [GSOC 2021 Yunfei ZHAO Github](https://github.com/YunfeiZHAO/gsoc-redhen-2021)
 * [Project page on Redhen](https://www.redhenlab.org/summer-of-code/red-hen-lab-gsoc-2021-projects)
+* [Original proposal of this project](https://www.overleaf.com/read/jwnknydxtpdh)
