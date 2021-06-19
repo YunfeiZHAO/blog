@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.2k 字
+      1.3k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      24
+      25
        分钟
     </span>
   
@@ -294,34 +294,32 @@ Illustration of the structures of container and virtual machine.
 <p>They are like docker hub where you can build, share or download images.</p>
 <h2 id="Useful-documents"><a href="#Useful-documents" class="headerlink" title="Useful documents"></a>Useful documents</h2><p>You may have a look at the detailed instructions to use <a target="_blank" rel="noopener" href="https://github.com/singularityhub/singularityhub.github.io/wiki/Build-A-Container">Singularity  Lab: Build A Container</a>.<br>There is also a very useful document <a target="_blank" rel="noopener" href="https://sites.google.com/case.edu/techne-public-site/singularity">on Redhen about using Sigularity</a>.<br>There is also an introduction of using singularity on <a target="_blank" rel="noopener" href="https://sites.google.com/a/case.edu/hpcc/hpc-cluster/software/Software-Guide/s-t/singularity">Case Western Reserve HPC</a>.<br>To install Singularity on your computer, have a look on <a target="_blank" rel="noopener" href="https://sylabs.io/guides/3.3/user-guide/installation.html">the official documents of Singularity container</a>.</p>
 <h2 id="Build-an-Openpose-singularity-container"><a href="#Build-an-Openpose-singularity-container" class="headerlink" title="Build an Openpose singularity container"></a>Build an Openpose singularity container</h2><ol>
-<li><p>Write a singularity definition file we name as openpose.def here. I followed steps introduced by Frankier and Zhiqi who are GSOC2020 students. You can have a look at their <a target="_blank" rel="noopener" href="https://github.com/frankier/openpose_containers">github</a>. My definition file can be found on <a target="_blank" rel="noopener" href="https://github.com/YunfeiZHAO/gsoc-redhen-2021/tree/main/singularity">My github</a>.</p>
-</li>
-<li><p>If you want to build Singularity container locally, you need to follow the <a target="_blank" rel="noopener" href="https://singularity-tutorial.github.io/01-installation/">introduction here</a>. I chose the Sigularity version 2.5.2 which can aussi be used on my HPC server. If you want to build a container locally, you need to have enough space on your working space, it can easily take more than 1g of memory depends on your project.</p>
-</li>
-<li><p>To build a container, you need to have a root access and you can use this command to get into it.</p>
-<ul>
+<li>Write a singularity definition file we name as openpose.def here. I followed steps introduced by Frankier and Zhiqi who are GSOC2020 students. You can have a look at their <a target="_blank" rel="noopener" href="https://github.com/frankier/openpose_containers">github</a>. My definition file can be found on <a target="_blank" rel="noopener" href="https://github.com/YunfeiZHAO/gsoc-redhen-2021/tree/main/singularity">My github</a>.</li>
+<li>If you want to build Singularity container locally, you need to follow the <a target="_blank" rel="noopener" href="https://singularity-tutorial.github.io/01-installation/">introduction here</a>. I chose the Sigularity version 2.5.2 which can aussi be used on my HPC server. If you want to build a container locally, you need to have enough space on your working space, it can easily take more than 1g of memory depends on your project.</li>
+<li>To build a container, you need to have a root access and you can use this command to get into it.<ul>
 <li><strong>sudo -i</strong><br>To run the build process, you need the command like this:</li>
-<li><strong>sudo singularity build –sandbox openpose_container openpose.def</strong></li>
+<li><strong>sudo singularity build --sandbox openpose_container openpose.def</strong></li>
 </ul>
 </li>
-<li><p>After the building process, you will find a new folder is created named openpose_container. You can shell into the container as follows (-w means “writable):</p>
-<ul>
+<li>After the building process, you will find a new folder is created named openpose_container. You can shell into the container as follows (-w means “writable):<ul>
 <li><strong>sudo singularity shell -w openpose_container</strong></li>
 </ul>
 </li>
-<li><p>To create the final portable unchangeable image (after training etc.):</p>
-<ul>
+<li>To create the final portable unchangeable image (after training etc.):<ul>
 <li><strong>sudo singularity build openpose_container.simg openpose_container</strong></li>
 </ul>
 </li>
-<li><p>Finally, you can either upload the whole folder of openpose_container or openpose_container.simg on your HPC. It is recommended by using <strong>rsync</strong> command than use <strong>scp</strong>. Because you need to upload some very big files only once. If the connection is interrupted, you can continue the work by reusing the same command.</p>
-<ul>
-<li><strong>sudo rsync –progress -a ./openpose_container/ server_domain_name:~/openpose_container/</strong></li>
+<li>Finally, you can either upload the whole folder of openpose_container or openpose_container.simg on your HPC. It is recommended by using <strong>rsync</strong> command than use <strong>scp</strong>. Because you need to upload some very big files only once. If the connection is interrupted, you can continue the work by reusing the same command.<ul>
+<li><strong>sudo rsync --progress -a ./openpose_container/ server_domain_name:~/openpose_container/</strong><br>Then you can easily run this command on HPC:</li>
+<li><strong>singularity shell --nv --bind ./home:/home openpose_container/</strong></li>
 </ul>
 </li>
+</ol>
+<p>From this step, we use a new container called ubuntu_container.</p>
+<ol start="7">
 <li><p>If you want to a container to have a shared folder with your host, you can use the following command.</p>
 <ul>
-<li><strong>sudo singularity shell -w –bind ~/Desktop/container:/home  ubuntu_container</strong><br>In this way, you can bind the folder ~/Desktop/container on your host to /home on your container.</li>
+<li><strong>sudo singularity shell -w --bind ~/Desktop/container:/home  ubuntu_container</strong><br>In this way, you can bind the folder ~/Desktop/container on your host to /home on your container, and with flag <strong>-w</strong> all modifications will resist even you exit the container.</li>
 </ul>
 </li>
 <li><p>To use a user in a container, but you do not in the sudoer group on HPC to change user. You can following these steps:</p>
@@ -343,7 +341,7 @@ Illustration of the structures of container and virtual machine.
 <li><p>Use GPU in singularity:</p>
 <ul>
 <li>You can firstly have a look at this document from <a target="_blank" rel="noopener" href="https://sylabs.io/guides/3.5/user-guide/gpu.html">Sylab.io</a></li>
-<li>what I do is to use <strong>singularity shell –nv –bind ./home:/home –bind /usr/local/cuda-11.2:/usr/local/cuda ubuntu_container</strong><br>In this way you mount cuda directory and also a list of files in /usr/bin of the host to your conatainer:<br>nvidia-cua-mps-control dnvidia-cuda-mps-server nvidia-debugdump nvidia-persistenced nvidia-smi</li>
+<li>what I do is to use <strong>singularity shell --nv --bind ./home:/home --bind /usr/local/cuda-11.2:/usr/local/cuda ubuntu_container</strong><br>In this way you mount cuda directory and also a list of files in /usr/bin of the host to your conatainer:<br>nvidia-cua-mps-control dnvidia-cuda-mps-server nvidia-debugdump nvidia-persistenced nvidia-smi</li>
 <li>You need to add cuda path in your .bashrc and source it<div class="code-wrapper"><pre><code class="hljs CUDA">export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;cuda&#x2F;bin
 export LD_LIBRARY_PATH&#x3D;$LD_LIBRARY_PATH:&#x2F;usr&#x2F;local&#x2F;cuda&#x2F;lib64</code></pre></div></li>
 </ul>

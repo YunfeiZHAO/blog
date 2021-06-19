@@ -23,4 +23,4 @@ On Friday 28st May, The whole Redhen Lab held a very lively team meeting. 58 peo
 I wrote two blogs about [attention mechnism](/2021/03/31/attention/) and [DETR](/2021/04/04/DETR/) respectively. If these two terms are new for you, feel free to have a look at them by clicking the links. In conclusion, models based on Transformer are very good tools to extract both local information that represents the shape of the hand in one video frame and global information that represent the motions across several video frames.
 
 # Transfer Learning on DETR
-During this week's work, I read thoroughly [the official implementation of DETR](https://github.com/facebookresearch/detr) published by Facebook. This project uses only python with Pytorch as the machine learning framework  that makes it easy to use and easy to understand.
+During this week's work, I read thoroughly [the official implementation of DETR](https://github.com/facebookresearch/detr) published by Facebook. This project uses Python with Pytorch as the machine learning framework hat makes it easy to use and easy to understand.

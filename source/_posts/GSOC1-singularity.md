@@ -94,16 +94,22 @@ To install Singularity on your computer, have a look on [the official documents 
 3. To build a container, you need to have a root access and you can use this command to get into it.
     * **sudo -i**
     To run the build process, you need the command like this:
-    * **sudo singularity build --sandbox openpose_container openpose.def**
+    * **sudo singularity build \--sandbox openpose_container openpose.def**
 4. After the building process, you will find a new folder is created named openpose_container. You can shell into the container as follows (-w means “writable):
     * **sudo singularity shell -w openpose_container**
 5. To create the final portable unchangeable image (after training etc.):
     * **sudo singularity build openpose_container.simg openpose_container**
 6. Finally, you can either upload the whole folder of openpose_container or openpose_container.simg on your HPC. It is recommended by using **rsync** command than use **scp**. Because you need to upload some very big files only once. If the connection is interrupted, you can continue the work by reusing the same command.
-    * **sudo rsync --progress -a ./openpose_container/ server_domain_name:~/openpose_container/**
+    * **sudo rsync \--progress -a ./openpose_container/ server_domain_name:~/openpose_container/**
+    Then you can easily run this command on HPC:
+    * **singularity shell \--nv \--bind ./home:/home openpose_container/**
+
+From this step, we use a new container called ubuntu_container.
+
 7. If you want to a container to have a shared folder with your host, you can use the following command.
-    * **sudo singularity shell -w --bind ~/Desktop/container:/home  ubuntu_container**
-    In this way, you can bind the folder ~/Desktop/container on your host to /home on your container.
+    * **sudo singularity shell -w \--bind ~/Desktop/container:/home  ubuntu_container**
+    In this way, you can bind the folder ~/Desktop/container on your host to /home on your container, and with flag **-w** all modifications will resist even you exit the container.
+
 8. To use a user in a container, but you do not in the sudoer group on HPC to change user. You can following these steps:
     * Create a home folder locally and mount the home folder on a container home directory when run it with sudo.
     * Add a user with the same user name on HPC and switch to this user. Install everything like Anaconda, etc.
@@ -118,7 +124,7 @@ To install Singularity on your computer, have a look on [the official documents 
 
 10. Use GPU in singularity:
     * You can firstly have a look at this document from [Sylab.io](https://sylabs.io/guides/3.5/user-guide/gpu.html)
-    * what I do is to use **singularity shell --nv --bind ./home:/home --bind /usr/local/cuda-11.2:/usr/local/cuda ubuntu_container**
+    * what I do is to use **singularity shell \--nv \--bind ./home:/home \--bind /usr/local/cuda-11.2:/usr/local/cuda ubuntu_container**
     In this way you mount cuda directory and also a list of files in /usr/bin of the host to your conatainer:
     nvidia-cua-mps-control dnvidia-cuda-mps-server nvidia-debugdump nvidia-persistenced nvidia-smi
     * You need to add cuda path in your .bashrc and source it
