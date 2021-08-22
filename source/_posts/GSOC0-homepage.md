@@ -49,9 +49,9 @@ Gesture recognition becomes popular in recent years since it can play an essenti
 * [Week 9 Report]() <a style="float: right;">(July 19 ~ July 25, 2021)</a>
 * [Week 10 Report]() <a style="float: right;">(July 26 ~ August 01, 2021)</a>
 * [Week 11 Report]() <a style="float: right;">(August 02 ~ August 08, 2021)</a>
-* [Week 11 Report]() <a style="float: right;">(August 09 ~ August 15, 2021)</a>
+* [Week 12 Report]() <a style="float: right;">(August 09 ~ August 15, 2021)</a>
 
-[Final result]() <a style="float: right;">(August 31, 2021)</a>
+[Final result](/2021/08/22/GSOC-final-2021/) <a style="float: right;">(August 31, 2021)</a>
 
 # Related Papers
 ## Computer Vision
