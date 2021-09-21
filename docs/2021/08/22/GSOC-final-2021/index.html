@@ -238,16 +238,16 @@
 <h1 id="Pipeline-for-gesture-temporal-detection"><a href="#Pipeline-for-gesture-temporal-detection" class="headerlink" title="Pipeline for gesture temporal detection"></a>Pipeline for gesture temporal detection</h1><p>Our pipeline is composed of three parts.</p>
 <h2 id="A-video-processing-script"><a href="#A-video-processing-script" class="headerlink" title="A video processing script"></a>A video processing script</h2><p>The video processing script located in <a target="_blank" rel="noopener" href="https://github.com/YunfeiZHAO/gsoc-redhen-2021/blob/main/gesture_detector/video.py">video.py</a>. In this part, I created some tools for video and frames convertion and also a function for keypoints visualisation and a frames selection function. In video processing, we mainly generate the final frames of video which will be used later for Openpose to extract keypoints.</p>
 <h2 id="A-singularity-container-which-is-epuiped-with-Openpose"><a href="#A-singularity-container-which-is-epuiped-with-Openpose" class="headerlink" title="A singularity container which is epuiped with Openpose"></a>A singularity container which is epuiped with Openpose</h2><p>The definition file of this container can be found in <a target="_blank" rel="noopener" href="https://github.com/YunfeiZHAO/gsoc-redhen-2021/tree/main/singularity">openpose.def</a> and you can use this file to generate a singuarity container that contains Openpose directly. When you have this container, you can log in with a user named ‘yxz2560’ (my account name on HPC) and mount home with a structure as following:</p>
-<div class="code-wrapper"><pre><code class="hljs 1c">home  
+<div class="code-wrapper"><pre><code class="hljs coq">home  
 │
-<span class="hljs-string">|───yxz2569</span>
+|<span class="hljs-type">───yxz2569</span>
     │
     │───ellen_show
-    │   <span class="hljs-string">|───video</span>
-    │   <span class="hljs-string">|───frames</span>
-    │   <span class="hljs-string">|───keypoints</span>
+    │   |<span class="hljs-type">───video</span>
+    │   |<span class="hljs-type">───frames</span>
+    │   |<span class="hljs-type">───keypoints</span>
     │
-    <span class="hljs-string">|───gsoc-redhen-2021</span>
+    |<span class="hljs-type">───gsoc</span>-redhen<span class="hljs-number">-2021</span>
 </code></pre></div>
 <p>Normally, I put a video in <strong>video</strong> folder and generate frames in <strong>frames</strong> folder then the frames with keypoints and the keypoint’s json file is generated in <strong>keypoints</strong> folder. There are also some sub-folders in these three folders, and they are automatically created by my scripts. </p>
 <p>Then in the container, you can run <a target="_blank" rel="noopener" href="https://github.com/YunfeiZHAO/gsoc-redhen-2021/blob/main/gesture_detector/keypoints.py">keypoints.py</a> to generate frames with keypoints for visualisation and a json file which contents the necessaire keypoints information.</p>

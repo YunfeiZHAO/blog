@@ -342,8 +342,8 @@ Illustration of the structures of container and virtual machine.
 <ul>
 <li>You can firstly have a look at this document from <a target="_blank" rel="noopener" href="https://sylabs.io/guides/3.5/user-guide/gpu.html">Sylab.io</a></li>
 <li>what I do is to use <strong>singularity shell --nv --bind ./home:/home --bind /usr/local/cuda-11.2:/usr/local/cuda ubuntu_container</strong><br>In this way you mount cuda directory and also a list of files in /usr/bin of the host to your conatainer:<br>nvidia-cua-mps-control dnvidia-cuda-mps-server nvidia-debugdump nvidia-persistenced nvidia-smi</li>
-<li>You need to add cuda path in your .bashrc and source it<div class="code-wrapper"><pre><code class="hljs CUDA">export PATH=$PATH:/usr/local/cuda/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64</code></pre></div></li>
+<li>You need to add cuda path in your .bashrc and source it<div class="code-wrapper"><pre><code class="hljs CUDA">export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;cuda&#x2F;bin
+export LD_LIBRARY_PATH&#x3D;$LD_LIBRARY_PATH:&#x2F;usr&#x2F;local&#x2F;cuda&#x2F;lib64</code></pre></div></li>
 </ul>
 </li>
 </ol>
