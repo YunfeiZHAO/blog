@@ -2,30 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.yunfeizhao.com/about/index.html</loc>
+    <loc>https://blog.yunfeizhao.com/2023/04/29/info/set-up-linux/</loc>
     
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yunfeizhao.com/2024/01/26/info/selenium/</loc>
     
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.yunfeizhao.com/2020/08/29/cs/sorting-algorithms/</loc>
+    
+    <lastmod>2024-12-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.yunfeizhao.com/2021/06/23/cs/GSOC5-schema-conversation-with-linguists/</loc>
+    
+    <lastmod>2024-12-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.yunfeizhao.com/2021/06/06/cs/GSOC2-Transfer-Learning/</loc>
+    
+    <lastmod>2024-12-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.yunfeizhao.com/2021/05/30/cs/GSOC1-singularity/</loc>
+    
+    <lastmod>2024-12-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.yunfeizhao.com/2021/08/22/cs/GSOC-final-2021/</loc>
+    
+    <lastmod>2024-12-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.yunfeizhao.com/2021/04/04/cs/DETR/</loc>
+    
+    <lastmod>2024-12-05</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yunfeizhao.com/2021/03/31/cs/attention/</loc>
     
-    <lastmod>2024-12-01</lastmod>
+    <lastmod>2024-12-05</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.yunfeizhao.com/2023/04/29/info/set-up-linux/</loc>
+    <loc>https://blog.yunfeizhao.com/about/index.html</loc>
     
-    <lastmod>2023-05-01</lastmod>
+    <lastmod>2024-12-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.yunfeizhao.com/2021/05/23/cs/GSOC0-homepage/</loc>
+    
+    <lastmod>2024-12-05</lastmod>
     
   </url>
   
@@ -36,59 +85,10 @@
     
   </url>
   
-  <url>
-    <loc>https://blog.yunfeizhao.com/2021/08/22/cs/GSOC-final-2021/</loc>
-    
-    <lastmod>2023-04-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.yunfeizhao.com/2021/04/04/cs/DETR/</loc>
-    
-    <lastmod>2023-04-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.yunfeizhao.com/2021/05/23/cs/GSOC0-homepage/</loc>
-    
-    <lastmod>2023-04-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.yunfeizhao.com/2021/05/30/cs/GSOC1-singularity/</loc>
-    
-    <lastmod>2023-04-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.yunfeizhao.com/2021/06/06/cs/GSOC2-Transfer-Learning/</loc>
-    
-    <lastmod>2023-04-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.yunfeizhao.com/2021/06/23/cs/GSOC5-schema-conversation-with-linguists/</loc>
-    
-    <lastmod>2023-04-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.yunfeizhao.com/2020/08/29/cs/sorting-algorithms/</loc>
-    
-    <lastmod>2023-04-30</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>https://blog.yunfeizhao.com/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -96,56 +96,56 @@
   
   <url>
     <loc>https://blog.yunfeizhao.com/tags/Paper-reading/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.yunfeizhao.com/tags/Event/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.yunfeizhao.com/tags/HPC/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.yunfeizhao.com/tags/Machine-Learning/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.yunfeizhao.com/tags/Gesture-temperal-detection/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.yunfeizhao.com/tags/Competitive-programming/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.yunfeizhao.com/tags/Remote-Server/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.yunfeizhao.com/tags/data/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -154,21 +154,21 @@
   
   <url>
     <loc>https://blog.yunfeizhao.com/categories/GSOC-2021-Redhen/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.yunfeizhao.com/categories/Computer-vision/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.yunfeizhao.com/categories/Informatics/</loc>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2024-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

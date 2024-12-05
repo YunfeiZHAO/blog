@@ -267,10 +267,10 @@
 <li>Communicates the new address to the Google name servers</li>
 </ul>
 <p>Google domain provides an API to perform manual updates with the API by making a POST request ot GET to the following URL:</p>
-<div class="code-wrapper"><pre><code class="hljs awk">domains.google.com<span class="hljs-regexp">/nic/u</span>pdate</code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs vim">domains.google.<span class="hljs-keyword">com</span>/nic/<span class="hljs-keyword">update</span></code></pre></div>
 
 <p>The API requires HTTPS and here is an example request:</p>
-<div class="code-wrapper"><pre><code class="hljs awk">https:<span class="hljs-regexp">//u</span>sername:password@domains.google.com<span class="hljs-regexp">/nic/u</span>pdate?hostname=subdomain.yourdomain.com&amp;myip=<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span></code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs vim">https://username:password@domains.google.<span class="hljs-keyword">com</span>/nic/<span class="hljs-keyword">update</span>?<span class="hljs-built_in">hostname</span>=subdomain.yourdomain.<span class="hljs-keyword">com</span>&amp;myip=<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span></code></pre></div>
 
 <p>The <strong>username</strong> and <strong>password</strong> correspond to the dynamic DNS you’ve created. The <strong>hostname</strong> is the domain name you want to attribute to your IP address. Finally, you need to detect your server IP address regularly. Once you notice your IP address is changed, you can use this API to change your DDNS table.</p>
 <h2 id="Send-request-by-bash"><a href="#Send-request-by-bash" class="headerlink" title="Send request by bash"></a>Send request by bash</h2><p>We use <strong>curl</strong> command to make an https request to google. </p>
@@ -286,7 +286,7 @@ curl -s <span class="hljs-variable">$URL</span>
 </code></pre></div>
 
 <h2 id="Detect-current-IP-address"><a href="#Detect-current-IP-address" class="headerlink" title="Detect current IP address"></a>Detect current IP address</h2><p>To get our public IP address, we need to make request to external server.<br>The API I use is:</p>
-<div class="code-wrapper"><pre><code class="hljs awk">curl -s https:<span class="hljs-regexp">//i</span>pinfo.io/ip</code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs 1c">curl <span class="hljs-punctuation">-</span>s https<span class="hljs-punctuation">:</span><span class="hljs-comment">//ipinfo.io/ip</span></code></pre></div>
 
 <h2 id="Do-not-disturb-web-servers"><a href="#Do-not-disturb-web-servers" class="headerlink" title="Do not disturb web servers"></a>Do not disturb web servers</h2><p>Now that we know the current IP address, we need to set an appropriate frequency to request the <em>ipinfo.io</em>  and when we detect a change, we update our DDNS. The complete code is below.</p>
 <p>google-ddns.sh</p>
@@ -355,6 +355,7 @@ sudo systemctl stop google_ddns.<span class="hljs-built_in">timer</span></code><
 <img src="/img/set-up-linux/systemd.jpg" srcset="/img/loading.gif" lazyload alt="Sytemd timer status" style="width:500px">
 </p>
 
+<iframe src="http://gadget_pocket.yunfeizhao.com/donation_unit" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
             </div>
             <hr>
             <div>

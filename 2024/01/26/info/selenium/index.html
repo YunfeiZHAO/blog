@@ -250,15 +250,15 @@ sudo apt-<span class="hljs-built_in">get</span> install -y ./google-chrome-stabl
 google-chrome <span class="hljs-comment">--version</span></code></pre></div>
 
 <h1 id="Setup-X11-for-remote-connection"><a href="#Setup-X11-for-remote-connection" class="headerlink" title="Setup X11 for remote connection"></a>Setup X11 for remote connection</h1><p>If your local machine is linux distribution with X11, it is much easier for setup. If you are using a windows local machine, you can follow my steps.</p>
-<div class="code-wrapper"><pre><code class="hljs awk"><span class="hljs-comment"># Remote server</span>
-sudo apt install xorg xauth x11-xserver-utils
+<div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># Remote server</span>
+<span class="hljs-built_in">sudo</span> apt install xorg xauth x11-xserver-utils
 <span class="hljs-comment"># setup ssh configuration file</span>
-sudo vim <span class="hljs-regexp">/etc/</span>ssh/sshd_config
+<span class="hljs-built_in">sudo</span> vim /etc/ssh/sshd_config
 <span class="hljs-comment"># modify these lines</span>
-X11Forwarding yes
-X11DisplayOffset <span class="hljs-number">10</span>
+X11Forwarding <span class="hljs-built_in">yes</span>
+X11DisplayOffset 10
 <span class="hljs-comment"># restart ssh server for remote linux</span>
-sudo systemctl restart ssh</code></pre></div>
+<span class="hljs-built_in">sudo</span> systemctl restart ssh</code></pre></div>
 
 <p>You need to install an X server on Windows so that the APP GUI on the remote server can be redirected to the Win server. I recommendmand <em>vcxsrv</em> as it is stable. Once it is run, a little icon of X11 is shown in the hidden icons bar.<br>The <strong>network setting</strong> on the local server network profile type needed to be set as a private network so that the local device is discoverable on the network. Otherwise, the redirected X11 APP can not find the X server on your local machine.</p>
 <div class="code-wrapper"><pre><code class="hljs nginx"><span class="hljs-comment"># local</span>
@@ -273,7 +273,7 @@ sudo systemctl restart ssh</code></pre></div>
 <p>Now if you run google chrome on remote server by this command:</p>
 <div class="code-wrapper"><pre><code class="hljs ebnf"><span class="hljs-attribute">google-chrome</span></code></pre></div>
 <p>You will see that a chrome window is opened on your local computer.</p>
-<iframe src="http://127.0.0.1:8000/donation_unit" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+<iframe src="http://gadget_pocket.yunfeizhao.com/donation_unit" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 
             </div>
             <hr>
