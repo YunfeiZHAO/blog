@@ -26,3 +26,5 @@ Why gestures' labels are not the key to our project? Computer engineers always w
 What do computer engineers should do, and what this project's value? To understand human behaviors and gesture meaning, a computer engineer may use his or her professional skill to provide linguists with indicators and statistical analysis of data. For instance, where the gesture starts and where the gesture ends. The probability of the existence of a gesture in this detected segmentation in a video.  The influence of a big movement of a hand key point to a certain gesture to occur.
 
 Based on the ideas of this meeting, I am going to make a diagram of my model and a foreseeable estimation of its final results.
+
+<iframe src="https://pocket.yunfeizhao.com/donation_unit" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
