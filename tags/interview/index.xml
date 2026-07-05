@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Interview on Les Baguettes</title>
+    <link>https://blog.yunfeizhao.com/tags/interview/</link>
+    <description>Recent content in Interview on Les Baguettes</description>
+    <image>
+      <title>Les Baguettes</title>
+      <url>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.163.3</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Feb 2026 23:00:20 +0200</lastBuildDate>
+    <atom:link href="https://blog.yunfeizhao.com/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web API Design</title>
+      <link>https://blog.yunfeizhao.com/blog/system_design/api/</link>
+      <pubDate>Mon, 09 Feb 2026 23:00:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/system_design/api/</guid>
+      <description>Website backend API design,</description>
+    </item>
+    <item>
+      <title>Database Caching System Design</title>
+      <link>https://blog.yunfeizhao.com/blog/system_design/database_cache/</link>
+      <pubDate>Sun, 27 Jul 2025 23:22:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/system_design/database_cache/</guid>
+      <description>Design User System - Database and cache</description>
+    </item>
+    <item>
+      <title>Ticket Master</title>
+      <link>https://blog.yunfeizhao.com/blog/system_design/ticket_master/</link>
+      <pubDate>Sun, 27 Jul 2025 23:22:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/system_design/ticket_master/</guid>
+      <description>A simple system design for a ticket master system.</description>
+    </item>
+    <item>
+      <title>famous Algorithms</title>
+      <link>https://blog.yunfeizhao.com/blog/algo/famous_algorithm/</link>
+      <pubDate>Sat, 27 Jul 2024 21:11:49 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/algo/famous_algorithm/</guid>
+      <description>Some famous algorithms for interview preparation.</description>
+    </item>
+    <item>
+      <title>Basic Algorithms</title>
+      <link>https://blog.yunfeizhao.com/blog/algo/basic/</link>
+      <pubDate>Thu, 27 Jul 2023 21:11:49 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/algo/basic/</guid>
+      <description>Some basic algorithms for interview preparation.</description>
+    </item>
+  </channel>
+</rss>

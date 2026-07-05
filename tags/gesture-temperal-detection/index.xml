@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gesture Temperal Detection on Les Baguettes</title>
+    <link>https://blog.yunfeizhao.com/tags/gesture-temperal-detection/</link>
+    <description>Recent content in Gesture Temperal Detection on Les Baguettes</description>
+    <image>
+      <title>Les Baguettes</title>
+      <url>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.163.3</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Jun 2021 11:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.yunfeizhao.com/tags/gesture-temperal-detection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GSOC week5 - Schema of the project and a conversation with a linguist - (Juin 21 ~ Juin 27, 2021)</title>
+      <link>https://blog.yunfeizhao.com/project/gsoc-2021/gsoc5-schema-conversation-with-linguists/</link>
+      <pubDate>Wed, 23 Jun 2021 11:00:00 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/project/gsoc-2021/gsoc5-schema-conversation-with-linguists/</guid>
+      <description>Coding period with Redhen during Google Summer of Code 2021. A meeting with a linguist and the illustration of gestures temporal detections. (Juin 21 ~ Juin 27, 2021)</description>
+    </item>
+  </channel>
+</rss>

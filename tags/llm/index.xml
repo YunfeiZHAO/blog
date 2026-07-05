@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>LLM on Les Baguettes</title>
+    <link>https://blog.yunfeizhao.com/tags/llm/</link>
+    <description>Recent content in LLM on Les Baguettes</description>
+    <image>
+      <title>Les Baguettes</title>
+      <url>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.163.3</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 14 May 2025 17:30:20 +0200</lastBuildDate>
+    <atom:link href="https://blog.yunfeizhao.com/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rag</title>
+      <link>https://blog.yunfeizhao.com/blog/nlp/rag/</link>
+      <pubDate>Wed, 14 May 2025 17:30:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/nlp/rag/</guid>
+      <description>&lt;h1 id=&#34;rag-retrieval-augmented-generation&#34;&gt;RAG (Retrieval-Augmented Generation)&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;RAG is a system that can provide new knowledge to the model.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;flowchart LR
+
+A1[1. Data Extraction]
+
+subgraph RAG_Pipeline
+    B2[2. Chunking]
+    B3[3. Vectorization / Embedding]
+    B4[4. Index Creation]
+    B5[5. Retrieval]
+end
+
+C7[7. Reranking]
+D9[9. LLM Summarization / Generation]
+
+E6[6. Retrieval Evaluation]
+F8[8. Rerank Evaluation]
+G10[10. Final Evaluation]
+
+
+A1 --&amp;gt; B2
+B2 --&amp;gt; B3
+B3 --&amp;gt; B4
+B4 --&amp;gt; B5
+B5 --&amp;gt; C7
+C7 --&amp;gt; D9
+
+B5 -. evaluate .-&amp;gt; E6
+C7 -. evaluate .-&amp;gt; F8
+D9 -. evaluate .-&amp;gt; G10
+
+E6  --&amp;gt; RAG_Pipeline
+F8  --&amp;gt; RAG_Pipeline
+G10  --&amp;gt; RAG_Pipeline
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are three main mode for AI systems:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LLM and RAG System Design</title>
+      <link>https://blog.yunfeizhao.com/blog/nlp/llm_design/</link>
+      <pubDate>Mon, 14 Apr 2025 17:30:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/nlp/llm_design/</guid>
+      <description>System design for LLM and RAG project</description>
+    </item>
+  </channel>
+</rss>

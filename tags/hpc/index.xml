@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>HPC on Les Baguettes</title>
+    <link>https://blog.yunfeizhao.com/tags/hpc/</link>
+    <description>Recent content in HPC on Les Baguettes</description>
+    <image>
+      <title>Les Baguettes</title>
+      <url>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.163.3</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 May 2021 12:13:53 +0000</lastBuildDate>
+    <atom:link href="https://blog.yunfeizhao.com/tags/hpc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GSOC week1 - Singularity - (May 24, 2021 - May 30, 2021)</title>
+      <link>https://blog.yunfeizhao.com/project/gsoc-2021/gsoc1-singularity/</link>
+      <pubDate>Sun, 30 May 2021 12:13:53 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/project/gsoc-2021/gsoc1-singularity/</guid>
+      <description>Community bonding period with Redhen during Google Summer of Code 2021. An introduction to Singularity and setup Singularity on HPC. (May 24, 2021 - May 30, 2021)</description>
+    </item>
+  </channel>
+</rss>

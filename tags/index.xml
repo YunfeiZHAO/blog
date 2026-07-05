@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Les Baguettes</title>
+    <link>https://blog.yunfeizhao.com/tags/</link>
+    <description>Recent content in Tags on Les Baguettes</description>
+    <image>
+      <title>Les Baguettes</title>
+      <url>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.163.3</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Jul 2026 19:36:43 +0200</lastBuildDate>
+    <atom:link href="https://blog.yunfeizhao.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paper Reading</title>
+      <link>https://blog.yunfeizhao.com/tags/paper-reading/</link>
+      <pubDate>Wed, 01 Jul 2026 19:36:43 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/paper-reading/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Engineering</title>
+      <link>https://blog.yunfeizhao.com/tags/data-engineering/</link>
+      <pubDate>Thu, 18 Jun 2026 12:08:13 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/data-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SRE</title>
+      <link>https://blog.yunfeizhao.com/tags/sre/</link>
+      <pubDate>Thu, 18 Jun 2026 12:08:13 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/sre/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Finance</title>
+      <link>https://blog.yunfeizhao.com/tags/finance/</link>
+      <pubDate>Tue, 16 Jun 2026 17:57:31 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/finance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aws Certificate</title>
+      <link>https://blog.yunfeizhao.com/tags/aws-certificate/</link>
+      <pubDate>Tue, 02 Jun 2026 22:00:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/aws-certificate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Generative AI</title>
+      <link>https://blog.yunfeizhao.com/tags/generative-ai/</link>
+      <pubDate>Tue, 02 Jun 2026 22:00:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/generative-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning Architecture</title>
+      <link>https://blog.yunfeizhao.com/tags/machine-learning-architecture/</link>
+      <pubDate>Wed, 18 Feb 2026 23:00:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/machine-learning-architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interview</title>
+      <link>https://blog.yunfeizhao.com/tags/interview/</link>
+      <pubDate>Mon, 09 Feb 2026 23:00:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/interview/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>System Design</title>
+      <link>https://blog.yunfeizhao.com/tags/system-design/</link>
+      <pubDate>Mon, 09 Feb 2026 23:00:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/system-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning， System Design</title>
+      <link>https://blog.yunfeizhao.com/tags/machine-learning-system-design/</link>
+      <pubDate>Wed, 13 Aug 2025 22:00:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/machine-learning-system-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Competition</title>
+      <link>https://blog.yunfeizhao.com/tags/competition/</link>
+      <pubDate>Sat, 19 Jul 2025 11:47:17 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/competition/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Project</title>
+      <link>https://blog.yunfeizhao.com/tags/project/</link>
+      <pubDate>Sat, 19 Jul 2025 11:47:17 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/project/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://blog.yunfeizhao.com/tags/llm/</link>
+      <pubDate>Wed, 14 May 2025 17:30:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>https://blog.yunfeizhao.com/tags/rag/</link>
+      <pubDate>Wed, 14 May 2025 17:30:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/rag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning Architecture， System Design</title>
+      <link>https://blog.yunfeizhao.com/tags/machine-learning-architecture-system-design/</link>
+      <pubDate>Thu, 13 Mar 2025 23:00:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/machine-learning-architecture-system-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Algorithm</title>
+      <link>https://blog.yunfeizhao.com/tags/algorithm/</link>
+      <pubDate>Sat, 27 Jul 2024 21:11:49 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>https://blog.yunfeizhao.com/tags/database/</link>
+      <pubDate>Wed, 22 May 2024 14:48:58 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed Systems</title>
+      <link>https://blog.yunfeizhao.com/tags/distributed-systems/</link>
+      <pubDate>Wed, 22 May 2024 14:48:58 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/distributed-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Study Notes</title>
+      <link>https://blog.yunfeizhao.com/tags/study-notes/</link>
+      <pubDate>Sat, 18 May 2024 16:59:25 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/study-notes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Investment</title>
+      <link>https://blog.yunfeizhao.com/tags/investment/</link>
+      <pubDate>Sun, 21 Apr 2024 13:17:33 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/investment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data</title>
+      <link>https://blog.yunfeizhao.com/tags/data/</link>
+      <pubDate>Fri, 26 Jan 2024 10:28:13 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://blog.yunfeizhao.com/tags/python/</link>
+      <pubDate>Tue, 02 Jan 2024 10:28:13 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Remote Server</title>
+      <link>https://blog.yunfeizhao.com/tags/remote-server/</link>
+      <pubDate>Sat, 29 Apr 2023 16:28:13 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/remote-server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gesture Temperal Detection</title>
+      <link>https://blog.yunfeizhao.com/tags/gesture-temperal-detection/</link>
+      <pubDate>Wed, 23 Jun 2021 11:00:00 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/gesture-temperal-detection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>https://blog.yunfeizhao.com/tags/machine-learning/</link>
+      <pubDate>Sun, 06 Jun 2021 21:37:44 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HPC</title>
+      <link>https://blog.yunfeizhao.com/tags/hpc/</link>
+      <pubDate>Sun, 30 May 2021 12:13:53 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/hpc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Event</title>
+      <link>https://blog.yunfeizhao.com/tags/event/</link>
+      <pubDate>Sun, 23 May 2021 12:13:53 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/event/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Competitive Programming</title>
+      <link>https://blog.yunfeizhao.com/tags/competitive-programming/</link>
+      <pubDate>Sat, 29 Aug 2020 13:32:51 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/tags/competitive-programming/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

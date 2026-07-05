@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Informatics on Les Baguettes</title>
+    <link>https://blog.yunfeizhao.com/categories/informatics/</link>
+    <description>Recent content in Informatics on Les Baguettes</description>
+    <image>
+      <title>Les Baguettes</title>
+      <url>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.163.3</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 18 Jun 2026 12:08:13 +0000</lastBuildDate>
+    <atom:link href="https://blog.yunfeizhao.com/categories/informatics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Postmortem</title>
+      <link>https://blog.yunfeizhao.com/blog/info/postmortem/</link>
+      <pubDate>Thu, 18 Jun 2026 12:08:13 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/info/postmortem/</guid>
+      <description>Notes of some postmortem cases.</description>
+    </item>
+    <item>
+      <title>Selenium</title>
+      <link>https://blog.yunfeizhao.com/blog/info/selenium/</link>
+      <pubDate>Fri, 26 Jan 2024 10:28:13 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/info/selenium/</guid>
+      <description>Web scraping with Selenium on remote server.</description>
+    </item>
+    <item>
+      <title>Python Notes</title>
+      <link>https://blog.yunfeizhao.com/blog/info/python_notes/</link>
+      <pubDate>Tue, 02 Jan 2024 10:28:13 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/info/python_notes/</guid>
+      <description>Python related notes.</description>
+    </item>
+    <item>
+      <title>Setup a remote linux server, DDNS,  MSI bios update</title>
+      <link>https://blog.yunfeizhao.com/blog/info/set-up-linux/</link>
+      <pubDate>Sat, 29 Apr 2023 16:28:13 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/info/set-up-linux/</guid>
+      <description>MSI bios update, ssh remote connection, update dynamic IP address to google domain</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>System Design on Les Baguettes</title>
+    <link>https://blog.yunfeizhao.com/tags/system-design/</link>
+    <description>Recent content in System Design on Les Baguettes</description>
+    <image>
+      <title>Les Baguettes</title>
+      <url>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.163.3</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Feb 2026 23:00:20 +0200</lastBuildDate>
+    <atom:link href="https://blog.yunfeizhao.com/tags/system-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web API Design</title>
+      <link>https://blog.yunfeizhao.com/blog/system_design/api/</link>
+      <pubDate>Mon, 09 Feb 2026 23:00:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/system_design/api/</guid>
+      <description>Website backend API design,</description>
+    </item>
+    <item>
+      <title>Database Caching System Design</title>
+      <link>https://blog.yunfeizhao.com/blog/system_design/database_cache/</link>
+      <pubDate>Sun, 27 Jul 2025 23:22:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/system_design/database_cache/</guid>
+      <description>Design User System - Database and cache</description>
+    </item>
+    <item>
+      <title>Ticket Master</title>
+      <link>https://blog.yunfeizhao.com/blog/system_design/ticket_master/</link>
+      <pubDate>Sun, 27 Jul 2025 23:22:20 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/system_design/ticket_master/</guid>
+      <description>A simple system design for a ticket master system.</description>
+    </item>
+    <item>
+      <title>System Design of financial data ingestion</title>
+      <link>https://blog.yunfeizhao.com/blog/finance/design/</link>
+      <pubDate>Wed, 21 Aug 2024 19:17:33 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/finance/design/</guid>
+      <description>&lt;p&gt;In this post, we will explore the system design of a financial data ingestion system. This system is crucial for collecting, processing, and storing financial data from various sources. There can be many conplicated distributed systems to handle financial data ingestion, but we will focus on a simplified version that can be used as a starting point for building such systems.&lt;/p&gt;
+&lt;h1 id=&#34;system-design-overview&#34;&gt;System Design Overview&lt;/h1&gt;
+&lt;p&gt;For financial data ingestion, we need to consider generally two typpes of data: Metadata and Time Series Data.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

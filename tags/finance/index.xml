@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Finance on Les Baguettes</title>
+    <link>https://blog.yunfeizhao.com/tags/finance/</link>
+    <description>Recent content in Finance on Les Baguettes</description>
+    <image>
+      <title>Les Baguettes</title>
+      <url>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.163.3</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 16 Jun 2026 17:57:31 +0000</lastBuildDate>
+    <atom:link href="https://blog.yunfeizhao.com/tags/finance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quantitative Methods</title>
+      <link>https://blog.yunfeizhao.com/blog/cfa/quantitative_methods/</link>
+      <pubDate>Tue, 16 Jun 2026 17:57:31 +0000</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/cfa/quantitative_methods/</guid>
+      <description>cfa module 1 quantitative methods</description>
+    </item>
+    <item>
+      <title>System Design of financial data ingestion</title>
+      <link>https://blog.yunfeizhao.com/blog/finance/design/</link>
+      <pubDate>Wed, 21 Aug 2024 19:17:33 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/finance/design/</guid>
+      <description>&lt;p&gt;In this post, we will explore the system design of a financial data ingestion system. This system is crucial for collecting, processing, and storing financial data from various sources. There can be many conplicated distributed systems to handle financial data ingestion, but we will focus on a simplified version that can be used as a starting point for building such systems.&lt;/p&gt;
+&lt;h1 id=&#34;system-design-overview&#34;&gt;System Design Overview&lt;/h1&gt;
+&lt;p&gt;For financial data ingestion, we need to consider generally two typpes of data: Metadata and Time Series Data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some basic concepts of the financial world</title>
+      <link>https://blog.yunfeizhao.com/blog/finance/basic/</link>
+      <pubDate>Sun, 21 Apr 2024 13:17:33 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/finance/basic/</guid>
+      <description>&lt;p&gt;Many people are interested in investing, but before doing investments, it is better to understand some basic concepts of the financial world.&lt;/p&gt;
+&lt;p&gt;Investment is the act of allocating resources, usually money, in order to generate income or profit. It can take many forms, such as stocks, bonds, real estate, or mutual funds. In another word, investment is the use of assets to earn income or profit.&lt;/p&gt;
+&lt;h1 id=&#34;investment-forms&#34;&gt;Investment forms&lt;/h1&gt;
+&lt;p&gt;Stocks, bonds, real estate, and mutual funds are some of the most common forms of investment. Each has its own characteristics, risks, and potential returns.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

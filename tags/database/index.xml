@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Database on Les Baguettes</title>
+    <link>https://blog.yunfeizhao.com/tags/database/</link>
+    <description>Recent content in Database on Les Baguettes</description>
+    <image>
+      <title>Les Baguettes</title>
+      <url>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.yunfeizhao.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.163.3</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 22 May 2024 14:48:58 +0200</lastBuildDate>
+    <atom:link href="https://blog.yunfeizhao.com/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distributed Storage</title>
+      <link>https://blog.yunfeizhao.com/blog/system_design/storage/</link>
+      <pubDate>Wed, 22 May 2024 14:48:58 +0200</pubDate>
+      <guid>https://blog.yunfeizhao.com/blog/system_design/storage/</guid>
+      <description>Basic concepts of distributed system.</description>
+    </item>
+  </channel>
+</rss>
